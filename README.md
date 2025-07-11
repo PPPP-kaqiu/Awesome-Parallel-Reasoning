@@ -25,6 +25,7 @@ To systematically survey this exciting area, this collection curates key papers 
     * [**Collaborative Agent Systems**](#agent-system): Frameworks that leverage multiple, coordinated agents to solve a single, complex task.
 3.  [**Parallel Inference Acceleration**](#accelerate): Techniques designed to speed up decoding, such as speculative decoding and novel schemes for allocating computational resources for parallel generation.
 4.  [**Infrastructure**](#infra): Frameworks and systems built to support and accelerate parallel reasoning at scale.
+4.  [**Industry Applications**](#available): Showcases how parallel reasoning techniques are implemented in prominent products and systems.
 <div>
 
 </div>
@@ -113,3 +114,10 @@ Chenyang Shao, Xinyuan Hu, Yutang Lin, Fengli Xu*
 #### vLLM(PagedAttention)[Code 💻](https://github.com/vllm-project/vllm)  
 
 #### SGLang(RadixAttention)[Code 💻](https://github.com/sgl-project/sglang)  
+
+### Available
+
++ [Geimini deepthink](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)
++ [Claude4 parallel test-time compute](https://www.anthropic.com/news/claude-4)
++ [Seed thinking1.6 parallel decode](https://seed.bytedance.com/zh/seed1_6)
++ [Grok4 heavy](https://x.com/xai/status/1943158495588815072)
