@@ -1,12 +1,15 @@
-<div align="center">
+<p align="center">
+  <h1 align="center">Awesome-Parallel-Reasoning</h1>
+</p>
 
-# Awesome-Parallel-Reasoning
+<p align="center">
+  <a href="LICENSE"><img src="img/License-MIT-purple.svg" alt="License: MIT"></a>
+  <a href="https://awesome.re"><img src="img/badge.svg" alt="Awesome"></a>
+</p>
 
-[![License: MIT](img/License-MIT-purple.svg)](LICENSE)[![Awesome](img/badge.svg)](https://awesome.re)
-
-**Curated collection of papers and resources on unlocking the potential of test time scaling of reasoning in large language models**
-
-</div>
+<p align="center">
+  <strong>Curated collection of papers and resources on unlocking the potential of test time scaling of reasoning in large language models</strong>
+</p>
 
 ## Overview
 
@@ -25,12 +28,9 @@ To systematically survey this exciting area, this collection curates key papers 
 3.  [**Parallel Inference Acceleration**](#accelerate): Techniques designed to speed up decoding, such as speculative decoding and novel schemes for allocating computational resources for parallel generation.
 4.  [**Infrastructure**](#infra): Frameworks and systems built to support and accelerate parallel reasoning at scale.
 4.  [**Industry Applications**](#available): Showcases how parallel reasoning techniques are implemented in prominent products and systems.
-<div>
 
-</div>
 
 ## 📄 Papers
----
 ### Premium
 #### Self-Consistency
 [2203] [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/pdf/2203.11171)  [Code 💻]()  
