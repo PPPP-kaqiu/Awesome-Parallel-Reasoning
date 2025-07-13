@@ -2,8 +2,7 @@
 
 # Awesome-Parallel-Reasoning
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](img/License-MIT-purple.svg)](LICENSE)[![Awesome](img/badge.svg)](https://awesome.re)
 
 **Curated collection of papers and resources on unlocking the potential of test time scaling of reasoning in large language models**
 
