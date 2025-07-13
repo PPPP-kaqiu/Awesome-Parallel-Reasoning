@@ -5,6 +5,7 @@
 <p align="center">
   <a href="LICENSE"><img src="img/License-MIT-purple.svg" alt="License: MIT"></a>
   <a href="https://awesome.re"><img src="img/badge.svg" alt="Awesome"></a>
+  <a href="https://github.com/PPPP-kaqiu/Awesome-Parallel-Reasoning"><img src="https://img.shields.io/badge/View%20on%20GitHub-blue?logo=github" alt="Github"></a>
 </p>
 
 <p align="center">
