@@ -249,20 +249,8 @@ In Gim, Seung-seob Lee, Lin Zhong
 [2508] [ParallelSearch: Train your LLMs to Decompose Query and Search Sub-queries in Parallel with Reinforcement Learning](https://arxiv.org/abs/2508.09303v1)  [Code 💻](https://shuzhao.me/ParallelSearchProject/)  
 Shu Zhao, Tan Yu, Anbang Xu, Japinder Singh, Aaditya Shukla, Rama Akkiraju
 ### Speculative Decoding
-[2505] [SSR: Speculative Parallel Scaling Reasoning in Test-time](https://arxiv.org/pdf/2505.15340)
-Yuanlin, Bo WANG, Xiang LIU, Hong CHEN, Aiwei LIU, Xuming HU
-
-[2505] [Accelerating Large Language Model Reasoning via Speculative Search](https://arxiv.org/pdf/2505.02865)
-Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma, Zhihai Wang, Jie Wang, Jilai Pan, Xilin Xia, Huiling Zhen, Mingxuan Yuan, Jianye Hao, Feng Wu
-
-[2410] [Fast Best-of-N Decoding via Speculative Rejection](https://arxiv.org/abs/2410.20290) 
-Hanshi Sun, Momin Haider, Ruiqi Zhang, Huitao Yang, Jiahao Qiu, Ming Yin, Mengdi Wang, Peter Bartlett, Andrea Zanette
-
-[2401] [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](https://arxiv.org/abs/2401.10774) 
-Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, Tri Dao
-
-[2312] [Lookahead: An Inference Acceleration Framework for Large Language Model with Lossless Generation Accuracy](https://arxiv.org/abs/2312.12728)  [Code 💻](https://github.com/alipay/PainlessInferenceAcceleration)  
-Yao Zhao, Zhitian Xie, Chen Liang, Chenyi Zhuang, Jinjie Gu
+[2203] [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](https://arxiv.org/abs/2203.164872)  [Code 💻](https://github.com/hemingkx/SpecDec)  
+Heming Xia, Tao Ge, Peiyi Wang, Si-Qing Chen, Furu Wei, Zhifang Sui
 
 [2211] [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192) 
 Yaniv Leviathan, Matan Kalman, Yossi Matias
@@ -270,24 +258,11 @@ Yaniv Leviathan, Matan Kalman, Yossi Matias
 [2302] [Accelerating Large Language Model Decoding with Speculative Sampling](https://arxiv.org/abs/2302.01318)
 Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper
 
-[2203] [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](https://arxiv.org/abs/2203.164872)  [Code 💻](https://github.com/hemingkx/SpecDec)  
-Heming Xia, Tao Ge, Peiyi Wang, Si-Qing Chen, Furu Wei, Zhifang Sui
-
-[2401] [Multi-Candidate Speculative Decoding](https://arxiv.org/abs/2401.06706)  [Code 💻](https://github.com/NJUNLP/MCSD)  
-Sen Yang, Shujian Huang, Xinyu Dai, Jiajun Chen
-
 [2305] [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](https://arxiv.org/abs/2305.09781v4)  [Code 💻](https://github.com/flexflow/flexflow-train)  
 Xupeng Miao, Gabriele Oliaro, Zhihao Zhang, Xinhao Cheng, Zeyu Wang, Zhengxin Zhang, Rae Ying Yee Wong, Alan Zhu, Lijie Yang, Xiaoxiang Shi, Chunan Shi, Zhuoming Chen, Daiyaan Arfeen, Reyna Abhyankar, Zhihao Jia
 
-
-[2311] [REST: Retrieval-Based Speculative Decoding](https://arxiv.org/abs/2311.08252)  [Code 💻](https://github.com/FasterDecoding/REST)  
-Zhenyu He, Zexuan Zhong, Tianle Cai, Jason D. Lee, Di He
-
-[2502] [Lossless Acceleration of Large Language Models with Hierarchical Drafting based on Temporal Locality in Speculative Decoding](https://arxiv.org/abs/2502.05609)
-Sukmin Cho, Sangjin Choi, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun Song, Jong C. Park, Youngjin Kwon
-
-[2312] [Cascade Speculative Drafting for Even Faster LLM Inference](https://arxiv.org/abs/2312.11462)  [Code 💻](https://github.com/lfsszd/CS-Drafting)  
-Ziyi Chen, Xiaocong Yang, Jiacheng Lin, Chenkai Sun, Kevin Chen-Chuan Chang, Jie Huang
+[2305] [Accelerating Transformer Inference for Translation via Parallel Decoding](https://arxiv.org/abs/2305.10427) 
+Andrea Santilli, Silvio Severino, Emilian Postolache, Valentino Maiorca, Michele Mancusi, Riccardo Marin, Emanuele Rodolà
 
 [2308] [Accelerating LLM Inference with Staged Speculative Decoding](https://arxiv.org/pdf/2308.04623) 
 Benjamin Spector, Chris Re
@@ -295,38 +270,65 @@ Benjamin Spector, Chris Re
 [2309] [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](https://arxiv.org/abs/2309.08168)  [Code 💻](https://github.com/dilab-zju/self-speculative-decoding)  
 Jun Zhang, Jue Wang, Huan Li, Lidan Shou, Ke Chen, Gang Chen, Sharad Mehrotra
 
-[2410] [SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration](https://arxiv.org/abs/2410.06916)  [Code 💻](https://github.com/hemingkx/SWIFT)  
-Heming Xia, Yongqi Li, Jun Zhang, Cunxiao Du, Wenjie Li
-
-[2404] [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](https://arxiv.org/abs/2404.16710)  [Code 💻](https://github.com/facebookresearch/LayerSkip)  
-Mostafa Elhoushi, Akshat Shrivastava, Diana Liskovich, Basil Hosmer, Bram Wasti, Liangzhen Lai, Anas Mahmoud, Bilge Acun, Saurabh Agarwal, Ahmed Roman, Ahmed A Aly, Beidi Chen, Carole-Jean Wu
-
-[2404] [Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting](https://arxiv.org/abs/2404.18911)  [Code 💻](https://github.com/Equationliu/Kangaroo)  
-Fangcheng Liu, Yehui Tang, Zhenhua Liu, Yunsheng Ni, Kai Han, Yunhe Wang
-
-[2402] [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](https://arxiv.org/abs/2402.05109)  [Code 💻](https://github.com/zankner/Hydra)  
-Zachary Ankner, Rishab Parthasarathy, Aniruddha Nrusimha, Christopher Rinard, Jonathan Ragan-Kelley, William Brandon
-
-[2504] [Falcon: Faster and Parallel Inference of Large Language Models Through Enhanced Semi-Autoregressive Drafting and Custom-Designed Decoding Tree](https://ojs.aaai.org/index.php/AAAI/article/view/34566) 
-Xiangxiang Gao, Weisheng Xie, Yiwei Xiang, Feng Ji
-
-[2401] [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](https://arxiv.org/abs/2401.15077)  [Code 💻](https://github.com/SafeAILab/EAGLE)  
-Yuhui Li, Fangyun Wei, Chao Zhang, Hongyang Zhang
-
-[2404] [Better & Faster Large Language Models via Multi-token Prediction](https://arxiv.org/pdf/2404.19737)
-Fabian Gloeckle,Badr Youbi Idrissi,Baptiste Rozière,David Lopez-Paz,Gabriel Synnaeve
+[2311] [REST: Retrieval-Based Speculative Decoding](https://arxiv.org/abs/2311.08252)  [Code 💻](https://github.com/FasterDecoding/REST)  
+Zhenyu He, Zexuan Zhong, Tianle Cai, Jason D. Lee, Di He
 
 [2311] [PaSS: Parallel Speculative Sampling](https://arxiv.org/abs/2311.13581)
 Giovanni Monea, Armand Joulin, Edouard Grave
 
-[2305] [Accelerating Transformer Inference for Translation via Parallel Decoding](https://arxiv.org/abs/2305.10427) 
-Andrea Santilli, Silvio Severino, Emilian Postolache, Valentino Maiorca, Michele Mancusi, Riccardo Marin, Emanuele Rodolà
+[2312] [Lookahead: An Inference Acceleration Framework for Large Language Model with Lossless Generation Accuracy](https://arxiv.org/abs/2312.12728)  [Code 💻](https://github.com/alipay/PainlessInferenceAcceleration)  
+Yao Zhao, Zhitian Xie, Chen Liang, Chenyi Zhuang, Jinjie Gu
+
+[2312] [Cascade Speculative Drafting for Even Faster LLM Inference](https://arxiv.org/abs/2312.11462)  [Code 💻](https://github.com/lfsszd/CS-Drafting)  
+Ziyi Chen, Xiaocong Yang, Jiacheng Lin, Chenkai Sun, Kevin Chen-Chuan Chang, Jie Huang
+
+[2401] [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](https://arxiv.org/abs/2401.10774) 
+Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, Tri Dao
+
+[2401] [Multi-Candidate Speculative Decoding](https://arxiv.org/abs/2401.06706)  [Code 💻](https://github.com/NJUNLP/MCSD)  
+Sen Yang, Shujian Huang, Xinyu Dai, Jiajun Chen
+
+[2401] [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](https://arxiv.org/abs/2401.15077)  [Code 💻](https://github.com/SafeAILab/EAGLE)  
+Yuhui Li, Fangyun Wei, Chao Zhang, Hongyang Zhang
 
 [2402] [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](https://arxiv.org/abs/2402.02057)  [Code 💻](https://github.com/hao-ai-lab/LookaheadDecoding)  
 Yichao Fu, Peter Bailis, Ion Stoica, Hao Zhang
 
+[2402] [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](https://arxiv.org/abs/2402.02057)  [Code 💻](https://github.com/hao-ai-lab/LookaheadDecoding)  
+Yichao Fu, Peter Bailis, Ion Stoica, Hao Zhang
+
+[2402] [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](https://arxiv.org/abs/2402.05109)  [Code 💻](https://github.com/zankner/Hydra)  
+Zachary Ankner, Rishab Parthasarathy, Aniruddha Nrusimha, Christopher Rinard, Jonathan Ragan-Kelley, William Brandon
+
+[2404] [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](https://arxiv.org/abs/2404.16710)  [Code 💻](https://github.com/facebookresearch/LayerSkip)  
+Mostafa Elhoushi, Akshat Shrivastava, Diana Liskovich, Basil Hosmer, Bram Wasti, Liangzhen Lai, Anas Mahmoud, Bilge Acun, Saurabh Agarwal, Ahmed Roman, Ahmed A Aly, Beidi Chen, Carole-Jean Wu
+
+[2404] [Better & Faster Large Language Models via Multi-token Prediction](https://arxiv.org/pdf/2404.19737)
+Fabian Gloeckle,Badr Youbi Idrissi,Baptiste Rozière,David Lopez-Paz,Gabriel Synnaeve
+
+[2404] [Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting](https://arxiv.org/abs/2404.18911)  [Code 💻](https://github.com/Equationliu/Kangaroo)  
+Fangcheng Liu, Yehui Tang, Zhenhua Liu, Yunsheng Ni, Kai Han, Yunhe Wang
+
 [2408] [Multi-Branch Self-Drafting for LLM Inference Acceleration](https://ojs.aaai.org/index.php/AAAI/article/view/34567/36722) 
 Zipeng Gao, Qingrong Xia, Tong Xu, Xinyu Duan, Zhi Zheng1, Zhefeng Wang, Enhong Chen
+
+[2410] [Fast Best-of-N Decoding via Speculative Rejection](https://arxiv.org/abs/2410.20290) 
+Hanshi Sun, Momin Haider, Ruiqi Zhang, Huitao Yang, Jiahao Qiu, Ming Yin, Mengdi Wang, Peter Bartlett, Andrea Zanette
+
+[2410] [SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration](https://arxiv.org/abs/2410.06916)  [Code 💻](https://github.com/hemingkx/SWIFT)  
+Heming Xia, Yongqi Li, Jun Zhang, Cunxiao Du, Wenjie Li
+
+[2502] [Lossless Acceleration of Large Language Models with Hierarchical Drafting based on Temporal Locality in Speculative Decoding](https://arxiv.org/abs/2502.05609)
+Sukmin Cho, Sangjin Choi, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun Song, Jong C. Park, Youngjin Kwon
+
+[2504] [Falcon: Faster and Parallel Inference of Large Language Models Through Enhanced Semi-Autoregressive Drafting and Custom-Designed Decoding Tree](https://ojs.aaai.org/index.php/AAAI/article/view/34566) 
+Xiangxiang Gao, Weisheng Xie, Yiwei Xiang, Feng Ji
+
+[2505] [SSR: Speculative Parallel Scaling Reasoning in Test-time](https://arxiv.org/pdf/2505.15340)
+Yuanlin, Bo WANG, Xiang LIU, Hong CHEN, Aiwei LIU, Xuming HU
+
+[2505] [Accelerating Large Language Model Reasoning via Speculative Search](https://arxiv.org/pdf/2505.02865)
+Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma, Zhihai Wang, Jie Wang, Jilai Pan, Xilin Xia, Huiling Zhen, Mingxuan Yuan, Jianye Hao, Feng Wu
 
 ---
 ## Available Source
