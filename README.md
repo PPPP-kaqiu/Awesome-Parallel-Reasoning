@@ -44,7 +44,7 @@ To systematically survey this exciting area, this collection curates key papers 
     * [**Parallel Function Calling**](#parallel-function-calling): Introduces parallelism at the system level by enabling an LLM to schedule and execute multiple external tool calls simultaneously.
     * [**Speculative Decoding**](#speculative-decoding): Accelerates token-level generation using a "draft-and-verify" paradigm, where a faster model proposes candidate tokens that the main model verifies in parallel.
 4.  [**Available Source**](#available-source): A review of prominent industry models and systems that leverage parallel reasoning to achieve state-of-the-art performance in complex domains.
-5.  [**Open Thoughts**](#open-thoughts): Some open questions and perspectives on parallel reasoning, open for discussion and future exploration.
+5.  [**Discussion**](#discussion): Discussion into the core principles of parallel reasoning, welcome to communicate in issue or email!
 
 # 📄 Papers
 ## Non-interactive Methods
