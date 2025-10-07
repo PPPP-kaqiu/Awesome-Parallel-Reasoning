@@ -107,8 +107,14 @@ Zenan Xu, Zexuan Qiu, Guanhua Huang, Kun Li, Siheng Li, Chenchen Zhang, Kejiao L
 [2509] [Learning to Refine: Self-Refinement of Parallel Reasoning in LLMs](https://arxiv.org/pdf/2509.00084)
 Qibin Wang, Pu Zhao, Shaohan Huang, Fangkai Yang, Lu Wang, Furu Wei, Qingwei Lin, Saravan Rajmohan, Dongmei Zhang
 
-[2509] [A2R: An Asymmetric Two-Stage Reasoning Framework for Parallel Reasoning](https://arxiv.org/abs/2509.22044) [Code 💻](https://github.com/PPPP-kaqiu/A2R)  
+[2509] ⭐⭐⭐ [A2R: An Asymmetric Two-Stage Reasoning Framework for Parallel Reasoning](https://arxiv.org/abs/2509.22044) [Code 💻](https://github.com/PPPP-kaqiu/A2R)  
 Ziqi Wang, Boye Niu, Zhongli Li, Linghui Meng, Jing Liu, Zhi Zheng, Tong Xu, Hua Wu, Haifeng Wang, Enhong Chen
+
+[2509] [Recursive Self-Aggregation Unlocks Deep Thinking in Large Language Models](http://arxiv.org/abs/2509.26626) [Code 💻](https://github.com/HyperPotatoNeo/RSA)  
+Siddarth Venkatraman, Vineet Jain, Sarthak Mittal, Vedant Shah, Johan Obando-Ceron, Yoshua Bengio, Brian R. Bartoldson, Bhavya Kailkhura, Guillaume Lajoie, Glen Berseth, Nikolay Malkin, Moksh Jain
+
+[2510] [Rethinking Thinking Tokens: LLMs as Improvement Operators](https://arxiv.org/abs/2510.01123)
+Lovish Madaan, Aniket Didolkar, Suchin Gururangan, John Quan, Ruan Silva, Ruslan Salakhutdinov, Manzil Zaheer, Sanjeev Arora, Anirudh Goyal
 
 ### Structure reasoning
 #### Foundational Structures
@@ -121,6 +127,11 @@ Maciej Besta1*, Nils Blach1*, Ales Kubicek, Robert Gerstenberger, Michał Podsta
 [2308] [Cumulative Reasoning with Large Language Models](https://arxiv.org/abs/2308.04371)  [Code 💻](https://github.com/iiis-ai/cumulative-reasoning)  
 Yifan Zhang, Jingqin Yang, Yang Yuan, Andrew Chi-Chih Yao
 
+[2509] [Flash-Searcher: Fast and Effective Web Agents via DAG-Based Parallel Execution](https://arxiv.org/abs/2509.25301)  [Code 💻](https://github.com/OPPO-PersonalAI/Flash-Searcher)  
+Tianrui Qin, Qianben Chen, Sinuo Wang, He Xing, King Zhu, He Zhu, Dingfeng Shi, Xinxin Liu, Ge Zhang, Jiaheng Liu, Yuchen Eleanor Jiang, Xitong Gao, Wangchunshu Zhou
+
+[2510] [Thoughtbubbles: an Unsupervised Method for Parallel Thinking in Latent Space](https://arxiv.org/abs/2510.00219) 
+Houjun Liu, Shikhar Murty, Christopher D. Manning, Róbert Csordás
 #### Guided Search & Efficiency Optimization
 [2305] [Self-Evaluation Guided Beam Search for Reasoning](https://arxiv.org/abs/2305.00633)  [Code 💻](https://github.com/YuxiXie/SelfEval-Guided-Decoding)  
 Yuxi Xie, Kenji Kawaguchi, Yiran Zhao, Xu Zhao, Min-Yen Kan, Junxian He, Qizhe Xie
@@ -216,6 +227,9 @@ Sumeet Ramesh Motwani, Chandler Smith, Rocktim Jyoti Das, Rafael Rafailov, Ivan 
 [2411] [SMoA: Improving Multi-agent Large Language Models with Sparse Mixture-of-Agents](https://arxiv.org/abs/2411.03284)
 Dawei Li, Zhen Tan, Peijia Qian, Yifan Li, Kumar Satvik Chaudhary, Lijie Hu, Jiayi Shen
 
+[2509] [TUMIX: Multi-Agent Test-Time Scaling with Tool-Use Mixture](https://arxiv.org/abs/2411.03284)
+Yongchao Chen, Jiefeng Chen, Rui Meng, Ji Yin, Na Li, Chuchu Fan, Chi Wang, Tomas Pfister, Jinsung Yoon
+
 ---
 ## Efficiency Methods
 ### Parallel Decoding
@@ -294,9 +308,6 @@ Yuhui Li, Fangyun Wei, Chao Zhang, Hongyang Zhang
 [2402] [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](https://arxiv.org/abs/2402.02057)  [Code 💻](https://github.com/hao-ai-lab/LookaheadDecoding)  
 Yichao Fu, Peter Bailis, Ion Stoica, Hao Zhang
 
-[2402] [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](https://arxiv.org/abs/2402.02057)  [Code 💻](https://github.com/hao-ai-lab/LookaheadDecoding)  
-Yichao Fu, Peter Bailis, Ion Stoica, Hao Zhang
-
 [2402] [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](https://arxiv.org/abs/2402.05109)  [Code 💻](https://github.com/zankner/Hydra)  
 Zachary Ankner, Rishab Parthasarathy, Aniruddha Nrusimha, Christopher Rinard, Jonathan Ragan-Kelley, William Brandon
 
@@ -341,9 +352,10 @@ Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma, Zhihai
 + [Grok4 heavy](https://x.com/xai/status/1943158495588815072)
 + [Qwen3-max heavy](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list)
 
-# Open Thoughts
-## Why does parallel thinking work?
-1. DFS vs BFS: Sequential reasoning methods, such as those in R1/O1, are analogous to a depth-first search (DFS). They generate solutions along a single path via iterative refinement, which risks getting trapped in a local minimum. In contrast, parallel reasoning resembles a breadth-first search (BFS), exploring multiple potential solutions simultaneously before aggregating them into a final answer. This approach effectively alleviates the prefix constraint problem.
-2. Following the evolution of parallel thinking, repeated sampling has become the most common paradigm for boosting test-time computation. A key trend in this area is the evolution of aggregation methods, which have shifted from simple self-consistency (voting) to more sophisticated ranking-based methods (scoring), and ultimately to generative approaches. This evolution marks a significant difference in the computational scaling of the aggregation stage. While voting methods rely on simple, rule-based selection of the most common answer, ranking methods like ORM/PRM require a full model forward pass to score each candidate, similar to reward models in modern reinforcement learning. Generative methods take this even further, re-reasoning over all parallel outputs to construct a final answer, which represents another level of scaling test-time compute. This progression highlights a central theme: whether it's scaling test-time computation or reward models, it seems scaling is all you need.
-## Parallel thinking vs Sequential thinking
-Sequential reasoning methods, like R1, operate by first rolling out multiple reasoning trajectories. These trajectories are then rewarded based on their final answers. Finally, paths are used to fine-tune the model’s parameters through a mechanism that reinforces positive outcomes and penalizes negative ones.In contrast, native parallel thinking treats these rollout trajectories as a unified context by concatenating them. The model then reasons based on this combined context, effectively turning the problem into a context-based reasoning task. This approach also allows the model to be trained on how to best utilize this parallel information, thereby enhancing its capabilities.
+# Discussion: Why does parallel thinking work?
+**DFS vs BFS** Sequential reasoning methods are analogous to a depth-first search (DFS). They generate solutions along a single path via iterative refinement, which risks getting trapped in a local minimum. In contrast, parallel reasoning resembles a breadth-first search (BFS), exploring multiple potential solutions simultaneously then aggregating them into a robust answer. This also indicates an interesting phenomenon: why simple repeated sampling methods can surpass the 'plan-process-summary' parallel method, which can be constrained by the quality of its initial plan.
+
+**Scaling Components** Following the evolution of parallel thinking, repeated sampling has become the most common paradigm for boosting test-time computation. A key trend in this area is the evolution of aggregation methods, which have shifted from simple self-consistency (voting) to more sophisticated ranking-based methods (scoring), and ultimately to generative approaches. This evolution marks a significant difference in the computational scaling of the aggregation stage. While voting methods rely on simple, rule-based selection of the most common answer, ranking methods like ORM/PRM require a full model forward pass to score each candidate, similar to reward models in modern reinforcement learning. Generative methods take this even further, re-reasoning over all parallel outputs to construct a final answer, which represents another level of scaling test-time compute. 
+Thus, parallel scaling increases computation not only by decomposing a problem into several tasks but also by generating multiple solutions in parallel. This scaling of the aggregator's computation also boosts final performance, which can be further improved by scaling the main model or the reward model's inference time. This progression highlights a central theme: allocating more computation to all components at test-time can lead to significantly better performance.
+
+**Tuning vs In-Context** Sequential reasoning methods, like R1, operate by first rolling out multiple reasoning trajectories. These trajectories are then rewarded based on their final answers. Finally, paths are used to fine-tune the model’s parameters through a mechanism that reinforces positive outcomes and penalizes negative ones.In contrast, native parallel thinking treats these rollout trajectories as a unified context by concatenating them. The model then performs its reasoning based on this combined input, effectively transforming a fine-tuning task into an in-context reasoning task. This approach also allows the model to be trained on how to best utilize this parallel information, thereby enhancing its capabilities.
