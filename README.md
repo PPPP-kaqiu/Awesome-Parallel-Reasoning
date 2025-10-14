@@ -90,6 +90,8 @@ Lunjun Zhang, Arian Hosseini, Hritik Bansal, Mehran Kazemi, Aviral Kumar, Rishab
 [2509] [Latency and Token-Aware Test-Time Compute](https://arxiv.org/abs/2509.09864)
 Jenny Y. Huang, Mehul Damani, Yousef El-Kurdi, Ramon Astudillo, Wei Sun
 
+[2510] [Parallel Test-Time Scaling for Latent Reasoning Models](https://arxiv.org/abs/2510.07745)  [Code 💻](https://github.com/YRYangang/LatentTTS)  
+Runyang You, Yongqi Li, Meng Liu, Wenjie Wang, Liqiang Nie, Wenjie Li
 #### Ranking Mechanism
 [2406] [BoNBoN Alignment for Large Language Models and the Sweetness of Best-of-n Sampling](https://arxiv.org/abs/2406.00832)  [Code 💻](https://github.com/gl-ybnbxb/BoNBoN)  
 Lin Gui, Cristina Gârbacea, Victor Veitch
@@ -188,6 +190,15 @@ Kaiwen Wei, Rui Shan, Dongsheng Zou, Jianzhong Yang, Bi Zhao, Junnan Zhu, Jiang 
 
 [2509] [Parallel-R1: Towards Parallel Thinking via Reinforcement Learning](https://arxiv.org/abs/2509.07980)  [Code 💻](https://github.com/zhengkid/Parallel-R1)  
 Tong Zheng, Hongming Zhang, Wenhao Yu, Xiaoyang Wang, Runpeng Dai, Rui Liu, Huiwen Bao, Chengsong Huang, Heng Huang, Dong Yu
+
+[2510] [FlashResearch: Real-time Agent Orchestration for Efficient Deep Research](https://arxiv.org/abs/2510.05145)  
+Lunyiu Nie, Nedim Lipka, Ryan A. Rossi, Swarat Chaudhuri
+
+[2510] [DeepPrune: Parallel Scaling without Inter-trace Redundancy](https://arxiv.org/abs/2510.08483)  [Code 💻](https://github.com/Alpha-Innovator/InternAgent)  
+Shangqing Tu, Yaxuan Li, Yushi Bai, Lei Hou, Juanzi Li
+
+[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/pdf/2510.08521)  [Code 💻](https://deepprune.github.io/)  
+Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Xiangchao Yan, Wenlong Zhang, Lei Bai, Bo Zhang
 ### Inter-interaction
 #### Debate Reflection
 [2501] [Enhancing LLM Reasoning with Multi-Path Collaborative Reactive and Reflection agents](https://arxiv.org/pdf/2501.00430)
@@ -201,6 +212,9 @@ Justin Chih-Yao Chen, Swarnadeep Saha, Mohit Bansal
 
 [2308] [ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate](https://arxiv.org/abs/2308.07201)  [Code 💻](https://github.com/chanchimin/ChatEval)  
 Chi-Min Chan, Weize Chen, Yusheng Su, Jianxuan Yu, Wei Xue, Shanghang Zhang, Jie Fu, Zhiyuan Liu
+
+[2510] [Biomedical reasoning in action: Multi-agent System for Auditable Biomedical Evidence Synthesis](https://arxiv.org/abs/2510.05335)  [Code 💻](https://m-reason.digitalecmt.com/)  
+Oskar Wysocki, Magdalena Wysocka, Mauricio Jacobo, Harriet Unsworth, André Freitas
 
 #### Collaboration Division of Labor
 [2310] [Corex: Pushing the Boundaries of Complex Reasoning through Multi-Model Collaboration](https://arxiv.org/abs/2310.00280)  [Code 💻](https://github.com/QiushiSun/Corex)  
@@ -253,6 +267,9 @@ Keyu Chen, Zhifeng Shen, Daohai Yu, Haoqian Wu, Wei Wen, Jianfeng He, Ruizhi Qia
 
 [2509] [ParaThinker: Native Parallel Thinking as a New Paradigm to Scale LLM Test-time Compute](https://arxiv.org/abs/2509.04475)  [Code 💻](https://github.com/MobileLLM/ParaThinker)  
 Hao Wen, Yifan Su, Feifei Zhang, Yunxin Liu, Yunhao Liu, Ya-Qin Zhang, Yuanchun Li
+
+[2510] [Training Large Language Models To Reason In Parallel With Global Forking Tokens](https://arxiv.org/abs/2510.05132) 
+Sheng Jia, Xiao Wang, Shiva Prasad Kasiviswanathan
 ### Parallel Function Calling
 [2312] [An LLM Compiler for Parallel Function Calling](https://arxiv.org/abs/2312.04511)  [Code 💻](https://github.com/SqueezeAILab/LLMCompiler)  
 Sehoon Kim, Suhong Moon, Ryan Tabrizi, Nicholas Lee, Michael W. Mahoney, Kurt Keutzer, Amir Gholami
