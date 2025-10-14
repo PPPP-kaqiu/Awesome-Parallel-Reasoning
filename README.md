@@ -5,13 +5,13 @@
 <p align="center">
   <a href="LICENSE"><img src="img/License-MIT-purple.svg" alt="License: MIT"></a>
   <a href="https://awesome.re"><img src="img/badge.svg" alt="Awesome"></a>
-  <a href="https://github.com/PPPP-kaqiu/Awesome-Parallel-Reasoning"><img src="https://img.shields.io/badge/View%20on%20GitHub-blue?logo=github" alt="Github"></a>
 </p>
 
 <p align="center">
   <strong>Curated collection of papers and resources on unlocking the potential of test time scaling of reasoning in large language models</strong>
 </p>
 
+![main framework](img/framework.png)
 # Overview
 
 In recent years, the capabilities of Large Language Models (LLMs) have advanced at an unprecedented rate. This progress has been largely attributed to the scaling of model parameters, training data, and computational resources. At the same time, inference-time performance has been significantly improved by extending the computational "length" through methods like Chain-of-Thought, which enables models to formulate a reasoning process before delivering a final answer.
@@ -44,7 +44,7 @@ To systematically survey this exciting area, this collection curates key papers 
     * [**Parallel Function Calling**](#parallel-function-calling): Introduces parallelism at the system level by enabling an LLM to schedule and execute multiple external tool calls simultaneously.
     * [**Speculative Decoding**](#speculative-decoding): Accelerates token-level generation using a "draft-and-verify" paradigm, where a faster model proposes candidate tokens that the main model verifies in parallel.
 4.  [**Available Source**](#available-source): A review of prominent industry models and systems that leverage parallel reasoning to achieve state-of-the-art performance in complex domains.
-5.  [**Discussion**](#discussion): Discussion into the core principles of parallel reasoning, welcome to communicate in issue or email!
+5.  [**Discussion🔥🔥🔥**](#discussion): Discussion into the core principles of parallel reasoning, welcome to communicate in issue or email!
 
 # 📄 Papers
 ## Non-interactive Methods
@@ -369,7 +369,7 @@ Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma, Zhihai
 + [Grok4 heavy](https://x.com/xai/status/1943158495588815072)
 + [Qwen3-max heavy](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list)
 
-# Discussion: Why does parallel thinking work?
+# <a id="discussion" name="discussion"></a>Discussion🔥🔥🔥: Why does parallel reasoning work?
 **DFS vs BFS** Sequential reasoning methods are analogous to a depth-first search (DFS). They generate solutions along a single path via iterative refinement, which risks getting trapped in a local minimum. In contrast, parallel reasoning resembles a breadth-first search (BFS), exploring multiple potential solutions simultaneously then aggregating them into a robust answer. This also indicates an interesting phenomenon: why simple repeated sampling methods can surpass the 'plan-process-summary' parallel method, which can be constrained by the quality of its initial plan.
 
 **Scaling Components** Following the evolution of parallel thinking, repeated sampling has become the most common paradigm for boosting test-time computation. A key trend in this area is the evolution of aggregation methods, which have shifted from simple self-consistency (voting) to more sophisticated ranking-based methods (scoring), and ultimately to generative approaches. This evolution marks a significant difference in the computational scaling of the aggregation stage. While voting methods rely on simple, rule-based selection of the most common answer, ranking methods like ORM/PRM require a full model forward pass to score each candidate, similar to reward models in modern reinforcement learning. Generative methods take this even further, re-reasoning over all parallel outputs to construct a final answer, which represents another level of scaling test-time compute. 
