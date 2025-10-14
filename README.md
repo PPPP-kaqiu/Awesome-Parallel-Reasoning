@@ -1,10 +1,8 @@
 <p align="center">
   <h1 align="center">Awesome-Parallel-Reasoning</h1>
 </p>
-
 <p align="center">
-  <a href="LICENSE"><img src="img/License-MIT-purple.svg" alt="License: MIT"></a>
-  <a href="https://awesome.re"><img src="img/badge.svg" alt="Awesome"></a>
+  <a href=https://github.com/PPPP-kaqiu/Awesome-Parallel-Reasoning/blob/main/A-Survey-on-Parallel-Reasoning.pdf>A-Survey-on-Parallel-Reasoning</a>
 </p>
 
 <p align="center">
