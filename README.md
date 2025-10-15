@@ -192,10 +192,10 @@ Tong Zheng, Hongming Zhang, Wenhao Yu, Xiaoyang Wang, Runpeng Dai, Rui Liu, Huiw
 [2510] [FlashResearch: Real-time Agent Orchestration for Efficient Deep Research](https://arxiv.org/abs/2510.05145)  
 Lunyiu Nie, Nedim Lipka, Ryan A. Rossi, Swarat Chaudhuri
 
-[2510] [DeepPrune: Parallel Scaling without Inter-trace Redundancy](https://arxiv.org/abs/2510.08483)  [Code 💻](https://github.com/Alpha-Innovator/InternAgent)  
+[2510] [DeepPrune: Parallel Scaling without Inter-trace Redundancy](https://arxiv.org/abs/2510.08483)  [Code 💻](https://deepprune.github.io/)    
 Shangqing Tu, Yaxuan Li, Yushi Bai, Lei Hou, Juanzi Li
 
-[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/pdf/2510.08521)  [Code 💻](https://deepprune.github.io/)  
+[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/pdf/2510.08521)  [Code 💻](https://github.com/Alpha-Innovator/InternAgent)
 Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Xiangchao Yan, Wenlong Zhang, Lei Bai, Bo Zhang
 ### Inter-interaction
 #### Debate Reflection
