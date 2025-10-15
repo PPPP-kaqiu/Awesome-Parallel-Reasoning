@@ -2,7 +2,7 @@
   <h1 align="center">Awesome-Parallel-Reasoning</h1>
 </p>
 <p align="center">
-  <a href=https://github.com/PPPP-kaqiu/Awesome-Parallel-Reasoning/blob/main/A-Survey-on-Parallel-Reasoning.pdf>🔥🔥🔥A-Survey-on-Parallel-Reasoning</a>
+  <a href=https://arxiv.org/abs/2510.12164>🔥🔥🔥A-Survey-on-Parallel-Reasoning</a>
 </p>
 
 <p align="center">
