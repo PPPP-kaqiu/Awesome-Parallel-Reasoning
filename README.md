@@ -27,7 +27,7 @@
 # 🔥 News
 
 - **[2025-10]** 🚀 Our comprehensive survey **"[A Survey on Parallel Reasoning](https://arxiv.org/abs/2510.12164)"** is now live on arXiv! It provides the first systematic roadmap for width-based inference scaling and test-time compute.
-- **[2025-10]** 🔥 **New Framework:** We released **[A2R: An Asymmetric Two-Stage Reasoning Framework](https://arxiv.org/abs/2509.22044)**, introducing a novel "Small-to-Big" explorer-synthesizer paradigm to optimize the efficiency and performance of parallel reasoning.
+- **[2025-9]** 🔥 **New Framework:** We released **[A2R: An Asymmetric Two-Stage Reasoning Framework](https://arxiv.org/abs/2509.22044)**, introducing a novel "Small-to-Big" explorer-synthesizer paradigm to optimize the efficiency and performance of parallel reasoning.
 
 # Overview
 
