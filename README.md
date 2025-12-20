@@ -66,7 +66,7 @@ To systematically survey this exciting area, this collection curates key papers 
 # Papers
 ## Non-interactive Methods
 ### Self-Consistency
-[2203] [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/pdf/2203.11171)  [Code 💻]()  
+[2203] [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/pdf/2203.11171)
 Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed H. Chi, Sharan Narang, Aakanksha Chowdhery, Denny Zhou
 
 [2305] [Let’s Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](https://arxiv.org/pdf/2305.11860)  [Code 💻](https://github.com/Pranjal2041/AdaptiveConsistency)  
@@ -247,9 +247,6 @@ Lunyiu Nie, Nedim Lipka, Ryan A. Rossi, Swarat Chaudhuri
 
 [2510] [DeepPrune: Parallel Scaling without Inter-trace Redundancy](https://arxiv.org/abs/2510.08483)  [Code 💻](https://github.com/Alpha-Innovator/InternAgent)  
 Shangqing Tu, Yaxuan Li, Yushi Bai, Lei Hou, Juanzi Li
-
-[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/pdf/2510.08521)  [Code 💻](https://deepprune.github.io/)  
-Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Xiangchao Yan, Wenlong Zhang, Lei Bai, Bo Zhang
 
 [2512] [ThreadWeaver: Adaptive Threading for Efficient Parallel Reasoning in Language Models](https://www.arxiv.org/abs/2512.07843)
 Long Lian, Sida Wang, Felix Juefei-Xu, Tsu-Jui Fu, Xiuyu Li, Adam Yala, Trevor Darrell, Alane Suhr, Yuandong Tian, Xi Victoria Lin
@@ -439,7 +436,7 @@ Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma, Zhihai
 [2510] [ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking](https://arxiv.org/abs/2510.24698)  [Code 💻](https://github.com/Alibaba-NLP/DeepResearch)  
 Baixuan Li, Dingchu Zhang, Jialong Wu, Wenbiao Yin, Zhengwei Tao, Yida Zhao, Liwen Zhang, Haiyang Shen, Runnan Fang, Pengjun Xie, Jingren Zhou, Yong Jiang
 
-[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/abs/2510.08521)  [Code 💻](https://github.com/InternScience/InternAgent)  
+[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/pdf/2510.08521)  [Code 💻](https://deepprune.github.io/)  
 Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Xiangchao Yan, Wenlong Zhang, Lei Bai, Bo Zhang
 
 [2512] [PaperDebugger: A Plugin-Based Multi-Agent System for In-Editor Academic Writing, Review, and Editing](https://arxiv.org/abs/2512.02589)  [Code 💻](https://github.com/PaperDebugger/PaperDebugger)  
@@ -451,7 +448,7 @@ Junyi Hou, Andre Lin Huikai, Nuo Chen , Yiwei Gong , Bingsheng He
 **Scaling Components** Following the evolution of parallel reasoning, repeated sampling has become the most common paradigm for boosting test-time computation. A key trend in this area is the evolution of aggregation methods, which have shifted from simple self-consistency (voting) to more sophisticated ranking-based methods (scoring), and ultimately to generative approaches. This evolution marks a significant difference in the computational scaling of the aggregation stage. While voting methods rely on simple, rule-based selection of the most common answer, ranking methods like ORM/PRM require a full model forward pass to score each candidate, similar to reward models in modern reinforcement learning. Generative methods take this even further, re-reasoning over all parallel outputs to construct a final answer, which represents another level of scaling test-time compute. 
 Thus, parallel scaling increases computation not only by decomposing a problem into several tasks but also by generating multiple solutions in parallel. This scaling of the aggregator's computation also boosts final performance, which can be further improved by scaling the main model or the reward model's inference time. This progression highlights a central theme: allocating more computation to all components at test-time can lead to significantly better performance.
 
-**Tuning vs In-Context** Sequential reasoning methods, like R1, operate by first rolling out multiple reasoning trajectories. These trajectories are then rewarded based on their final answers. Finally, paths are used to fine-tune the model’s parameters through a mechanism that reinforces positive outcomes and penalizes negative ones.In contrast, native parallel thinking treats these rollout trajectories as a unified context by concatenating them. The model then performs its reasoning based on this combined input, effectively transforming a fine-tuning task into an in-context reasoning task. This approach also allows the model to be trained on how to best utilize this parallel information, thereby enhancing its capabilities.
+**Tuning vs In-Context** Sequential reasoning methods, like R1, operate by first rolling out multiple reasoning trajectories. These trajectories are then rewarded based on their final answers. Finally, paths are used to fine-tune the model’s parameters through a mechanism that reinforces positive outcomes and penalizes negative ones.In contrast, native parallel reasoning treats these rollout trajectories as a unified context by concatenating them. The model then performs its reasoning based on this combined input, effectively transforming a fine-tuning task into an in-context reasoning task. This approach also allows the model to be trained on how to best utilize this parallel information, thereby enhancing its capabilities.
 
 # ✍️ Citation
 
