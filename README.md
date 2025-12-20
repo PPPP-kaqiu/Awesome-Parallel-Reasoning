@@ -1,15 +1,34 @@
 <p align="center">
   <h1 align="center">Awesome-Parallel-Reasoning</h1>
 </p>
+
 <p align="center">
-  <a href=https://arxiv.org/abs/2510.12164>🔥🔥🔥A-Survey-on-Parallel-Reasoning</a>
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+  <img src="https://img.shields.io/github/last-commit/PPPP-kaqiu/Awesome-Parallel-Reasoning?style=flat-square" alt="Last Commit">
+  <img src="https://img.shields.io/badge/Paper-2510.12164-B31B1B.svg?style=flat-square" alt="Paper">
+  <img src="https://img.shields.io/github/stars/PPPP-kaqiu/Awesome-Parallel-Reasoning?style=flat-square" alt="Stars">
 </p>
 
 <p align="center">
-  <strong>Curated collection of papers and resources on unlocking the potential of test time scaling of reasoning in large language models</strong>
+  <strong>Unlocking the potential of test-time scaling through Parallel Width in LLMs.</strong>
 </p>
 
-![main framework](img/framework.png)
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#papers">Papers</a> •
+  <a href="#applications">Applications</a> •
+  <a href="#discussion">Discussion</a> •
+  <a href="#citation">Citation</a>
+</p>
+
+---
+![main framework](img/main.png)
+
+# 🔥 News
+
+- **[2025-10]** 🚀 Our comprehensive survey **"[A Survey on Parallel Reasoning](https://arxiv.org/abs/2510.12164)"** is now live on arXiv! It provides the first systematic roadmap for width-based inference scaling and test-time compute.
+- **[2025-10]** 🔥 **New Framework:** We released **[A2R: An Asymmetric Two-Stage Reasoning Framework](https://arxiv.org/abs/2509.22044)**, introducing a novel "Small-to-Big" explorer-synthesizer paradigm to optimize the efficiency and performance of parallel reasoning.
+
 # Overview
 
 In recent years, the capabilities of Large Language Models (LLMs) have advanced at an unprecedented rate. This progress has been largely attributed to the scaling of model parameters, training data, and computational resources. At the same time, inference-time performance has been significantly improved by extending the computational "length" through methods like Chain-of-Thought, which enables models to formulate a reasoning process before delivering a final answer.
@@ -41,10 +60,10 @@ To systematically survey this exciting area, this collection curates key papers 
     * [**Parallel Decoding**](#parallel-decoding): Exploits task-level or semantic-level parallelism by decomposing a generation task into independent units that can be decoded concurrently.
     * [**Parallel Function Calling**](#parallel-function-calling): Introduces parallelism at the system level by enabling an LLM to schedule and execute multiple external tool calls simultaneously.
     * [**Speculative Decoding**](#speculative-decoding): Accelerates token-level generation using a "draft-and-verify" paradigm, where a faster model proposes candidate tokens that the main model verifies in parallel.
-4.  [**Available Source**](#available-source): A review of prominent industry models and systems that leverage parallel reasoning to achieve state-of-the-art performance in complex domains.
+4.  [**Applications**](#applications): A review of real-world scenarios where parallel reasoning is applied to solve complex problems, enhance reliability, and accelerate specialized workflows.
 5.  [**Discussion🔥🔥🔥**](#discussion): Discussion into the core principles of parallel reasoning, welcome to communicate in issue or email!
 
-# 📄 Papers
+# Papers
 ## Non-interactive Methods
 ### Self-Consistency
 [2203] [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/pdf/2203.11171)  [Code 💻]()  
@@ -56,14 +75,26 @@ Pranjal Aggarwal, Aman Madaan, Yiming Yang, Mausam
 [2311] [Universal Self-Consistency for Large Language Model Generation](https://arxiv.org/abs/2311.17311) 
 Xinyun Chen, Renat Aksitov, Uri Alon, Jie Ren, Kefan Xiao, Pengcheng Yin, Sushant Prakash, Charles Sutton, Xuezhi Wang, Denny Zhou
 
-[2402] [Soft Self-Consistency Improves Language Model Agents](https://arxiv.org/pdf/2402.13212)  [Code 💻](https://github.com/HanNight/soft_self_consistency)  
+[2401] [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](https://arxiv.org/abs/2401.10480) 
+Yiwei Li, Peiwen Yuan, Shaoxiong Feng, Boyuan Pan, Xinglin Wang, Bin Sun, Heda Wang, Kan Li
+
+[2402] [Soft Self-Consistency Improves Language Model Agents](https://arxiv.org/pdf/2402.13212) [Code 💻](https://github.com/HanNight/soft_self_consistency)  
 Han Wang, Archiki Prasad, Elias Stengel-Eskin, Mohit Bansal
+
+[2408] [Make Every Penny Count: Difficulty-Adaptive Self-Consistency for Cost-Efficient Reasoning](https://arxiv.org/abs/2408.13457)  [Code 💻](https://github.com/WangXinglin/DSC)  
+Xinglin Wang, Shaoxiong Feng, Yiwei Li, Peiwen Yuan, Yueqi Zhang, Chuyi Tan, Boyuan Pan, Yao Hu, Kan Li
 
 [2508] [Deep Think with Confidence](https://arxiv.org/abs/2508.15260)  [Code 💻](https://github.com/facebookresearch/deepconf)  
 Yichao Fu, Xuewei Wang, Yuandong Tian, Jiawei Zhao
 
 [2508] [Confidence-Weighted Token Set Cover for Early Hypothesis Pruning in Self-Consistency](https://arxiv.org/abs/2508.03979)
 Md Arafat Sultan, Ramón Fernandez Astudillo
+
+[2511] [Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling](https://arxiv.org/abs/2511.09345)  [Code 💻](https://github.com/noforit/SeerSC)  
+Shiyu Ji, Yixuan Wang, Yijun Liu, Qingfu Zhu, Wanxiang Che
+
+[2512] [Think in Parallel, Answer as One: Logit Averaging for Open-Ended Reasoning](https://arxiv.org/abs/2512.02874) 
+Haonan Wang, Chao Du, Kenji Kawaguchi, Tianyu Pang
 
 ### Ranking base
 #### Best-of-N Sampling
@@ -85,14 +116,30 @@ Peiyi Wang, Lei Li, Zhihong Shao, R.X. Xu, Damai Dai, Yifei Li, Deli Chen, Y.Wu,
 [2408] [Generative Verifiers: Reward Modeling as Next-Token Prediction](https://arxiv.org/pdf/2408.15240)  [Code 💻](https://sites.google.com/view/generative-reward-models)  
 Lunjun Zhang, Arian Hosseini, Hritik Bansal, Mehran Kazemi, Aviral Kumar, Rishabh Agarwal
 
+[2505] [Rethinking Optimal Verification Granularity for Compute-Efficient Test-Time Scaling](https://arxiv.org/abs/2505.11730)  [Code 💻](https://github.com/hmarkc/VG-Search)  
+Hao Mark Chen, Guanxi Lu, Yasuyuki Okoshi, Zhiwen Mo, Masato Motomura, Hongxiang Fan
+
+[2506] [Every Rollout Counts: Optimal Resource Allocation for Efficient Test-Time Scaling](https://arxiv.org/abs/2506.15707)  [Code 💻](https://github.com/WangXinglin/DORA)  
+Xinglin Wang, Yiwei Li, Shaoxiong Feng, Peiwen Yuan, Yueqi Zhang, Jiayi Shi, Chuyi Tan, Boyuan Pan, Yao Hu, Kan Li
+
 [2509] [Latency and Token-Aware Test-Time Compute](https://arxiv.org/abs/2509.09864)
 Jenny Y. Huang, Mehul Damani, Yousef El-Kurdi, Ramon Astudillo, Wei Sun
 
 [2510] [Parallel Test-Time Scaling for Latent Reasoning Models](https://arxiv.org/abs/2510.07745)  [Code 💻](https://github.com/YRYangang/LatentTTS)  
 Runyang You, Yongqi Li, Meng Liu, Wenjie Wang, Liqiang Nie, Wenjie Li
+
+[2512] [SPARK: Stepwise Process-Aware Rewards for Reference-Free Reinforcement Learning](https://arxiv.org/abs/2512.03244) 
+Salman Rahman, Sruthi Gorantla, Arpit Gupta, Swastik Roy, Nanyun Peng, Yang Liu
+
+[2512] [Mode-Conditioning Unlocks Superior Test-Time Scaling](https://www.arxiv.org/abs/2512.01127)
+Chen Henry Wu, Sachin Goyal, Aditi Raghunathan
+
 #### Ranking Mechanism
 [2406] [BoNBoN Alignment for Large Language Models and the Sweetness of Best-of-n Sampling](https://arxiv.org/abs/2406.00832)  [Code 💻](https://github.com/gl-ybnbxb/BoNBoN)  
 Lin Gui, Cristina Gârbacea, Victor Veitch
+
+[2407] [Integrate the Essence and Eliminate the Dross: Fine-Grained Self-Consistency for Free-Form Language Generation](https://arxiv.org/abs/2407.02056) [Code 💻](https://github.com/WangXinglin/FSC)  
+Xinglin Wang, Yiwei Li, Shaoxiong Feng, Peiwen Yuan, Boyuan Pan, Heda Wang, Yao Hu, Kan Li
 
 [2501] [PairJudge RM: Perform Best-of-N Sampling with Knockout Tournament](https://arxiv.org/abs/2501.13007)  [Code 💻](https://github.com/THU-KEG/PairJudgeRM/)  
 Yantao Liu, Zijun Yao, Rui Min, Yixin Cao, Lei Hou, Juanzi Li
@@ -112,6 +159,9 @@ Ziqi Wang, Boye Niu, Zhongli Li, Linghui Meng, Jing Liu, Zhi Zheng, Tong Xu, Hua
 
 [2509] [Recursive Self-Aggregation Unlocks Deep Thinking in Large Language Models](http://arxiv.org/abs/2509.26626) [Code 💻](https://github.com/HyperPotatoNeo/RSA)  
 Siddarth Venkatraman, Vineet Jain, Sarthak Mittal, Vedant Shah, Johan Obando-Ceron, Yoshua Bengio, Brian R. Bartoldson, Bhavya Kailkhura, Guillaume Lajoie, Glen Berseth, Nikolay Malkin, Moksh Jain
+
+[2509] [The Majority is not always right: RL training for solution aggregation](https://arxiv.org/abs/2509.06870)
+Wenting Zhao, Pranjal Aggarwal, Swarnadeep Saha, Asli Celikyilmaz, Jason Weston, Ilia Kulikov
 
 [2510] [Rethinking Thinking Tokens: LLMs as Improvement Operators](https://arxiv.org/abs/2510.01123)
 Lovish Madaan, Aniket Didolkar, Suchin Gururangan, John Quan, Ruan Silva, Ruslan Salakhutdinov, Manzil Zaheer, Sanjeev Arora, Anirudh Goyal
@@ -165,6 +215,9 @@ Shibo Hao, Yi Gu, Haodi Ma, Joshua Jiahua Hong, Zhen Wang, Daisy Zhe Wang, Zhiti
 [2502] [Speculate, then Collaborate: Fusing Knowledge of Language Models during Decoding](https://arxiv.org/abs/2502.08020)
 Ziyao Wang, Muneeza Azmat, Ang Li, Raya Horesh, Mikhail Yurochkin
 
+[2503] [Entropy-gated branching for efficient test-time reasoning](https://arxiv.org/abs/2503.21961) 
+Xianzhi Li, Ethan Callanan, Abdellah Ghassel, Xiaodan Zhu
+
 [2504] [Hogwild! Inference: Parallel LLM Generation via Concurrent Attention](https://arxiv.org/pdf/2504.06261)  [Code 💻](https://github.com/eqimp/hogwild_llm)  
 Gleb Rodionov, Roman Garipov, Alina Shutova, George Yakushev, Erik Schultheis, Vage Egiazarian, Anton Sinitsin, Denis Kuznedelev, Dan Alistarh
 
@@ -197,6 +250,13 @@ Shangqing Tu, Yaxuan Li, Yushi Bai, Lei Hou, Juanzi Li
 
 [2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/pdf/2510.08521)  [Code 💻](https://deepprune.github.io/)  
 Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Xiangchao Yan, Wenlong Zhang, Lei Bai, Bo Zhang
+
+[2512] [ThreadWeaver: Adaptive Threading for Efficient Parallel Reasoning in Language Models](https://www.arxiv.org/abs/2512.07843)
+Long Lian, Sida Wang, Felix Juefei-Xu, Tsu-Jui Fu, Xiuyu Li, Adam Yala, Trevor Darrell, Alane Suhr, Yuandong Tian, Xi Victoria Lin
+
+[2512] [Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning](https://www.arxiv.org/abs/2512.07461)  [Code 💻](https://github.com/bigai-nlco/Native-Parallel-Reasoner)  
+Tong Wu, Yang Liu, Jun Bai, Zixia Jia, Shuyi Zhang, Ziyong Lin, Yanting Wang, Song-Chun Zhu, Zilong Zheng
+
 ### Inter-interaction
 #### Debate Reflection
 [2501] [Enhancing LLM Reasoning with Multi-Path Collaborative Reactive and Reflection agents](https://arxiv.org/pdf/2501.00430)
@@ -241,6 +301,12 @@ Dawei Li, Zhen Tan, Peijia Qian, Yifan Li, Kumar Satvik Chaudhary, Lijie Hu, Jia
 
 [2509] [TUMIX: Multi-Agent Test-Time Scaling with Tool-Use Mixture](https://arxiv.org/abs/2411.03284)
 Yongchao Chen, Jiefeng Chen, Rui Meng, Ji Yin, Na Li, Chuchu Fan, Chi Wang, Tomas Pfister, Jinsung Yoon
+
+[2510] [The Era of Agentic Organization: Learning to Organize with Language Models](https://arxiv.org/abs/2510.26658)  [Code 💻](https://thegenerality.com/agi/)  
+Zewen Chi, Li Dong, Qingxiu Dong, Yaru Hao, Xun Wu, Shaohan Huang, Furu Wei
+
+[2512] [Multi-Path Collaborative Reasoning via Reinforcement Learning](https://arxiv.org/abs/2512.01485)  [Code 💻](https://multi-path-collaborative-reasoning.github.io/)  
+Jindi Lv, Yuhao Zhou, Zheng Zhu, Xiaofeng Wang, Guan Huang, Jiancheng Lv
 
 ---
 ## Efficiency Methods
@@ -344,6 +410,9 @@ Hanshi Sun, Momin Haider, Ruiqi Zhang, Huitao Yang, Jiahao Qiu, Ming Yin, Mengdi
 [2410] [SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration](https://arxiv.org/abs/2410.06916)  [Code 💻](https://github.com/hemingkx/SWIFT)  
 Heming Xia, Yongqi Li, Jun Zhang, Cunxiao Du, Wenjie Li
 
+[2412] [DEER: Draft with Diffusion, Verify with Autoregressive Models](https://arxiv.org/abs/2512.15176)  [Code 💻](https://github.com/hemingkx/SWIFT)  
+Zicong Cheng, Guo-Wei Yang, Jia Li, Zhijie Deng, Meng-Hao Guo, Shi-Min Hu
+
 [2502] [Lossless Acceleration of Large Language Models with Hierarchical Drafting based on Temporal Locality in Speculative Decoding](https://arxiv.org/abs/2502.05609)
 Sukmin Cho, Sangjin Choi, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun Song, Jong C. Park, Youngjin Kwon
 
@@ -357,20 +426,42 @@ Yuanlin, Bo WANG, Xiang LIU, Hong CHEN, Aiwei LIU, Xuming HU
 Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma, Zhihai Wang, Jie Wang, Jilai Pan, Xilin Xia, Huiling Zhen, Mingxuan Yuan, Jianye Hao, Feng Wu
 
 ---
-## Available Source
+## Applications
 
-+ [vLLM(PagedAttention)](https://github.com/vllm-project/vllm)
-+ [SGLang(RadixAttention)](https://github.com/sgl-project/sglang)
-+ [Geimini deepthink](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)
-+ [Claude4 heavy](https://www.anthropic.com/news/claude-4)
-+ [Seed thinking1.6](https://seed.bytedance.com/zh/seed1_6)
-+ [Grok4 heavy](https://x.com/xai/status/1943158495588815072)
-+ [Qwen3-max heavy](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list)
+[vLLM] [vLLM(PagedAttention)](https://github.com/vllm-project/vllm)
+[SGLang] [SGLang(RadixAttention)](https://github.com/sgl-project/sglang)
+[Geimini] [Geimini deepthink](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)
+[Claude] [Claude4 heavy](https://www.anthropic.com/news/claude-4)
+[Seed] [Seed thinking1.6](https://seed.bytedance.com/zh/seed1_6)
+[Grok] [Grok4 heavy](https://x.com/xai/status/1943158495588815072)
+[Qwen] [Qwen3-max heavy](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list)
+
+[2510] [ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking](https://arxiv.org/abs/2510.24698)  [Code 💻](https://github.com/Alibaba-NLP/DeepResearch)  
+Baixuan Li, Dingchu Zhang, Jialong Wu, Wenbiao Yin, Zhengwei Tao, Yida Zhao, Liwen Zhang, Haiyang Shen, Runnan Fang, Pengjun Xie, Jingren Zhou, Yong Jiang
+
+[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/abs/2510.08521)  [Code 💻](https://github.com/InternScience/InternAgent)  
+Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Xiangchao Yan, Wenlong Zhang, Lei Bai, Bo Zhang
+
+[2512] [PaperDebugger: A Plugin-Based Multi-Agent System for In-Editor Academic Writing, Review, and Editing](https://arxiv.org/abs/2512.02589)  [Code 💻](https://github.com/PaperDebugger/PaperDebugger)  
+Junyi Hou, Andre Lin Huikai, Nuo Chen , Yiwei Gong , Bingsheng He
 
 # <a id="discussion" name="discussion"></a>Discussion🔥🔥🔥: Why does parallel reasoning work?
 **DFS vs BFS** Sequential reasoning methods are analogous to a depth-first search (DFS). They generate solutions along a single path via iterative refinement, which risks getting trapped in a local minimum. In contrast, parallel reasoning resembles a breadth-first search (BFS), exploring multiple potential solutions simultaneously then aggregating them into a robust answer. This also indicates an interesting phenomenon: why simple repeated sampling methods can surpass the 'plan-process-summary' parallel method, which can be constrained by the quality of its initial plan.
 
-**Scaling Components** Following the evolution of parallel thinking, repeated sampling has become the most common paradigm for boosting test-time computation. A key trend in this area is the evolution of aggregation methods, which have shifted from simple self-consistency (voting) to more sophisticated ranking-based methods (scoring), and ultimately to generative approaches. This evolution marks a significant difference in the computational scaling of the aggregation stage. While voting methods rely on simple, rule-based selection of the most common answer, ranking methods like ORM/PRM require a full model forward pass to score each candidate, similar to reward models in modern reinforcement learning. Generative methods take this even further, re-reasoning over all parallel outputs to construct a final answer, which represents another level of scaling test-time compute. 
+**Scaling Components** Following the evolution of parallel reasoning, repeated sampling has become the most common paradigm for boosting test-time computation. A key trend in this area is the evolution of aggregation methods, which have shifted from simple self-consistency (voting) to more sophisticated ranking-based methods (scoring), and ultimately to generative approaches. This evolution marks a significant difference in the computational scaling of the aggregation stage. While voting methods rely on simple, rule-based selection of the most common answer, ranking methods like ORM/PRM require a full model forward pass to score each candidate, similar to reward models in modern reinforcement learning. Generative methods take this even further, re-reasoning over all parallel outputs to construct a final answer, which represents another level of scaling test-time compute. 
 Thus, parallel scaling increases computation not only by decomposing a problem into several tasks but also by generating multiple solutions in parallel. This scaling of the aggregator's computation also boosts final performance, which can be further improved by scaling the main model or the reward model's inference time. This progression highlights a central theme: allocating more computation to all components at test-time can lead to significantly better performance.
 
 **Tuning vs In-Context** Sequential reasoning methods, like R1, operate by first rolling out multiple reasoning trajectories. These trajectories are then rewarded based on their final answers. Finally, paths are used to fine-tune the model’s parameters through a mechanism that reinforces positive outcomes and penalizes negative ones.In contrast, native parallel thinking treats these rollout trajectories as a unified context by concatenating them. The model then performs its reasoning based on this combined input, effectively transforming a fine-tuning task into an in-context reasoning task. This approach also allows the model to be trained on how to best utilize this parallel information, thereby enhancing its capabilities.
+
+# ✍️ Citation
+
+If you find this repository or our survey paper helpful, please consider citing:
+
+```bibtex
+@article{wang2025parallelreasoning,
+  title={A Survey on Parallel Reasoning},
+  author={Ziqi Wang and Boye Niu and Zipeng Gao and others},
+  journal={arXiv preprint arXiv:2510.12164},
+  year={2025}
+}
+```
