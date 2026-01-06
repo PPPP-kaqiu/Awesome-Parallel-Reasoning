@@ -48,7 +48,7 @@ To systematically survey this exciting area, this collection curates key papers 
         * [**Generative Synthesis**](#generative-synthesis): A paradigm that moves beyond selection to construct a new, superior solution by integrating insights from all generated candidates, often using an "explorer-synthesizer" architecture.
     * [**Structure reasoning**](#structure-reasoning): A shift from linear Chain-of-Thought to dynamic problem-solving topologies that allow for exploring and integrating multiple lines of thought.
         * [**Foundational Structures**](#foundational-structures): Seminal frameworks that introduced non-linear reasoning paths, such as Tree-of-Thoughts (ToT) and Graph-of-Thoughts (GoT).
-        * [**Guided Search & Efficiency Optimization**](#guided-search-&-efficiency-optimization): Techniques designed to manage the vast search spaces of structured reasoning, using guided search strategies and system-level enhancements to improve efficiency.
+        * [**Guided Search & Efficiency Optimization**](#guided-search-efficiency-optimization): Techniques designed to manage the vast search spaces of structured reasoning, using guided search strategies and system-level enhancements to improve efficiency.
         * [**Other Paradigm**](#other-paradigm): Frameworks that redefine the LLM's role from a monolithic reasoner to a specialized component within a larger cognitive architecture.
 2.  [**Interactive Methods**](#interactive-methods):A paradigm where multiple reasoning paths or agents dynamically exchange information during the inference process, rather than only at the end.
     * [**Intra-interaction**](#intra-interaction): Interaction where different reasoning threads within a single model share information to adjust their trajectories during generation.
@@ -254,6 +254,9 @@ Long Lian, Sida Wang, Felix Juefei-Xu, Tsu-Jui Fu, Xiuyu Li, Adam Yala, Trevor D
 [2512] [Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning](https://www.arxiv.org/abs/2512.07461)  [Code 💻](https://github.com/bigai-nlco/Native-Parallel-Reasoner)  
 Tong Wu, Yang Liu, Jun Bai, Zixia Jia, Shuyi Zhang, Ziyong Lin, Yanting Wang, Song-Chun Zhu, Zilong Zheng
 
+[2601] [Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware](https://arxiv.org/abs/2601.01298)  [Code 💻](https://github.com/JorgeLRW/warp-cortex)  
+Jorge L. Ruiz Williams
+
 ### Inter-interaction
 #### Debate Reflection
 [2501] [Enhancing LLM Reasoning with Multi-Path Collaborative Reactive and Reflection agents](https://arxiv.org/pdf/2501.00430)
@@ -422,15 +425,24 @@ Yuanlin, Bo WANG, Xiang LIU, Hong CHEN, Aiwei LIU, Xuming HU
 [2505] [Accelerating Large Language Model Reasoning via Speculative Search](https://arxiv.org/pdf/2505.02865)
 Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma, Zhihai Wang, Jie Wang, Jilai Pan, Xilin Xia, Huiling Zhen, Mingxuan Yuan, Jianye Hao, Feng Wu
 
+[2601] [Falcon-H1R: Pushing the Reasoning Frontiers with a Hybrid Model for Efficient Test-Time Scaling](https://arxiv.org/abs/2601.02346)  [Code 💻](https://huggingface.co/collections/tiiuae/falcon-h1r)  
+Falcon LLM Team, Iheb Chaabane, Puneesh Khanna, Suhail Mohmad, Slim Frikha, Shi Hu, Abdalgader Abubaker, Reda Alami, Mikhail Lubinets, Mohamed El Amine Seddik, Hakim Hacid
+
 ---
 ## Applications
 
 [vLLM] [vLLM(PagedAttention)](https://github.com/vllm-project/vllm)
+
 [SGLang] [SGLang(RadixAttention)](https://github.com/sgl-project/sglang)
-[Geimini] [Geimini deepthink](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)
+
+[Gemini] [Geimini deepthink](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)
+
 [Claude] [Claude4 heavy](https://www.anthropic.com/news/claude-4)
+
 [Seed] [Seed thinking1.6](https://seed.bytedance.com/zh/seed1_6)
+
 [Grok] [Grok4 heavy](https://x.com/xai/status/1943158495588815072)
+
 [Qwen] [Qwen3-max heavy](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list)
 
 [2510] [ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking](https://arxiv.org/abs/2510.24698)  [Code 💻](https://github.com/Alibaba-NLP/DeepResearch)  
