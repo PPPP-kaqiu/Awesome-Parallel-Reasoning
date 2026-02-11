@@ -182,6 +182,10 @@ Tianrui Qin, Qianben Chen, Sinuo Wang, He Xing, King Zhu, He Zhu, Dingfeng Shi, 
 
 [2510] [Thoughtbubbles: an Unsupervised Method for Parallel Thinking in Latent Space](https://arxiv.org/abs/2510.00219) 
 Houjun Liu, Shikhar Murty, Christopher D. Manning, Róbert Csordás
+
+[2602] [DTS: Enhancing Large Reasoning Models via Decoding Tree Sketching](https://arxiv.org/pdf/2511.00640) [Code 💻](https://github.com/ZichengXu/Decoding-Tree-Sketching)
+Zicheng Xu, Xiuyi Lou, Guanchu Wang, Yu-Neng Chuang, Feng Luo, Guangyao Zheng, Alexander S. Szalay, Zirui Liu, Vladimir Braverman
+  
 #### Guided Search & Efficiency Optimization
 [2305] [Self-Evaluation Guided Beam Search for Reasoning](https://arxiv.org/abs/2305.00633)  [Code 💻](https://github.com/YuxiXie/SelfEval-Guided-Decoding)  
 Yuxi Xie, Kenji Kawaguchi, Yiran Zhao, Xu Zhao, Min-Yen Kan, Junxian He, Qizhe Xie
