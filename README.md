@@ -18,7 +18,8 @@
   <a href="#papers">Papers</a> •
   <a href="#applications">Applications</a> •
   <a href="#discussion">Discussion</a> •
-  <a href="#citation">Citation</a>
+  <a href="#citation">Citation</a> •
+  <a href="#license">License</a>
 </p>
 
 ---
@@ -171,8 +172,8 @@ Lovish Madaan, Aniket Didolkar, Suchin Gururangan, John Quan, Ruan Silva, Ruslan
 [2305] [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601)  [Code 💻](https://github.com/kyegomez/tree-of-thoughts)  
 Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L. Griffiths, Yuan Cao, Karthik Narasimhan
 
-[2308] [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](https://arxiv.org/pdf/2203.11171)  [Code 💻](https://github.com/spcl/graph-of-thoughts)  
-Maciej Besta1*, Nils Blach1*, Ales Kubicek, Robert Gerstenberger, Michał Podstawski, Lukas Gianinazzi, Joanna Gajda, Tomasz Lehmann, Hubert Niewiadomski, Piotr Nyczyk, Torsten Hoefler
+[2308] [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](https://arxiv.org/abs/2308.09687)  [Code 💻](https://github.com/spcl/graph-of-thoughts)  
+Maciej Besta, Nils Blach, Ales Kubicek, Robert Gerstenberger, Michal Podstawski, Lukas Gianinazzi, Joanna Gajda, Tomasz Lehmann, Hubert Niewiadomski, Piotr Nyczyk, Torsten Hoefler
 
 [2308] [Cumulative Reasoning with Large Language Models](https://arxiv.org/abs/2308.04371)  [Code 💻](https://github.com/iiis-ai/cumulative-reasoning)  
 Yifan Zhang, Jingqin Yang, Yang Yuan, Andrew Chi-Chih Yao
@@ -200,7 +201,7 @@ Shuangtao Li, Shuaihao Dong, Kexin Luan, Xinhan Di, Chaofan Ding
 Yifu Ding, Wentao Jiang, Shunyu Liu, Yongcheng Jing, Jinyang Guo, Yingjie Wang, Jing Zhang, Zengmao Wang, Ziwei Liu, Bo Du, Xianglong Liu, Dacheng Tao
 
 [2502] [Atom of Thoughts for Markov LLM Test-Time Scaling](https://arxiv.org/abs/2502.12018)  [Code 💻](https://github.com/qixucen/atom)  
-Fengwei Teng, Zhaoyang Yu, Quan Shi, Jiayi Zhang, Chenglin Wu, Yuyu Luo
+Fengwei Teng, Quan Shi, Zhaoyang Yu, Jiayi Zhang, Yuyu Luo, Chenglin Wu, Zhijiang Guo
 
 #### Other Paradigm
 [2210] [Measuring and Narrowing the Compositionality Gap in Language Models](https://arxiv.org/abs/2210.03350)  [Code 💻](https://github.com/ofirpress/self-ask)  
@@ -209,7 +210,7 @@ Ofir Press, Muru Zhang, Sewon Min, Ludwig Schmidt, Noah A. Smith, Mike Lewis
 [2210] [ThinkSum: Probabilistic reasoning over sets using large language models](https://arxiv.org/abs/2210.01293)
 Batu Ozturkler, Nikolay Malkin, Zhen Wang, Nebojsa Jojic
 
-[2305] [Reasoning with Language Model is Planning with World Model](https://arxiv.org/abs/2305.14992)  [Code 💻](https://github.com/Ber666/llm-reasoners)
+[2305] [Reasoning with Language Model is Planning with World Model](https://arxiv.org/abs/2305.14992)  [Code 💻](https://github.com/Ber666/RAP)
 Shibo Hao, Yi Gu, Haodi Ma, Joshua Jiahua Hong, Zhen Wang, Daisy Zhe Wang, Zhiting Hu
 
 ---
@@ -234,10 +235,10 @@ Tongxu Luo, Wenyu Du, Jiaxi Bi, Stephen Chung, Zhengyang Tang, Hao Yang, Min Zha
 [2505] [Group Think: Multiple Concurrent Reasoning Agents Collaborating at Token Level Granularity](https://arxiv.org/abs/2505.11107)  
 Chan-Jan Hsu, Davide Buffelli, Jamie McGowan, Feng-Ting Liao, Yi-Chang Chen, Sattar Vakili, Da-shan Shiu
 
-[2506] [How we built our multi-agent research system](https://www.anthropic.com/engineering/built-multi-agent-research-system)  
+[2504] [How we built our multi-agent research system](https://www.anthropic.com/engineering/built-multi-agent-research-system)  
 Anthropic Team
 
-[2508] [Hybrid Deep Searcher: Integrating Parallel and Sequential Search Reasoning](https://arxiv.org/pdf/2508.19113)
+[2508] [Hybrid Deep Searcher: Scalable Parallel and Sequential Search Reasoning](https://arxiv.org/abs/2508.19113)
 Dayoon Ko, Jihyuk Kim, Haeju Park, Sohyeon Kim, Dahyun Lee, Yongrae Jo, Gunhee Kim, Moontae Lee, Kyungjae Lee
 
 [2508] [MIRAGE: Scaling Test-Time Inference with Parallel Graph-Retrieval-Augmented Reasoning Chains](https://arxiv.org/abs/2508.18260)
@@ -266,10 +267,10 @@ Jorge L. Ruiz Williams
 [2501] [Enhancing LLM Reasoning with Multi-Path Collaborative Reactive and Reflection agents](https://arxiv.org/pdf/2501.00430)
 Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma
 
-[2305] [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/pdf/2305.14325)  [Code 💻](https://github.com/composable-models/llm_multiagent_debate/blob/main/README.md)  
+[2305] [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)  [Code 💻](https://github.com/composable-models/llm_multiagent_debate)  
 Yilun Du, Shuang Li, Antonio Torralba, Joshua B. Tenenbaum, Igor Mordatch
 
-[2309] [ReConcile: Round-Table Conference Improves Reasoning via Consensus among Diverse LLMs](https://arxiv.org/abs/2309.13007)  [Code 💻]( https://github.com/dinobby/ReConcile)  
+[2309] [ReConcile: Round-Table Conference Improves Reasoning via Consensus among Diverse LLMs](https://arxiv.org/abs/2309.13007)  [Code 💻](https://github.com/dinobby/ReConcile)  
 Justin Chih-Yao Chen, Swarnadeep Saha, Mohit Bansal
 
 [2308] [ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate](https://arxiv.org/abs/2308.07201)  [Code 💻](https://github.com/chanchimin/ChatEval)  
@@ -303,7 +304,7 @@ Sumeet Ramesh Motwani, Chandler Smith, Rocktim Jyoti Das, Rafael Rafailov, Ivan 
 [2411] [SMoA: Improving Multi-agent Large Language Models with Sparse Mixture-of-Agents](https://arxiv.org/abs/2411.03284)
 Dawei Li, Zhen Tan, Peijia Qian, Yifan Li, Kumar Satvik Chaudhary, Lijie Hu, Jiayi Shen
 
-[2509] [TUMIX: Multi-Agent Test-Time Scaling with Tool-Use Mixture](https://arxiv.org/abs/2411.03284)
+[2510] [TUMIX: Multi-Agent Test-Time Scaling with Tool-Use Mixture](https://arxiv.org/abs/2510.01279)
 Yongchao Chen, Jiefeng Chen, Rui Meng, Ji Yin, Na Li, Chuchu Fan, Chi Wang, Tomas Pfister, Jinsung Yoon
 
 [2510] [The Era of Agentic Organization: Learning to Organize with Language Models](https://arxiv.org/abs/2510.26658)  [Code 💻](https://thegenerality.com/agi/)  
@@ -348,7 +349,7 @@ In Gim, Seung-seob Lee, Lin Zhong
 [2508] [ParallelSearch: Train your LLMs to Decompose Query and Search Sub-queries in Parallel with Reinforcement Learning](https://arxiv.org/abs/2508.09303v1)  [Code 💻](https://shuzhao.me/ParallelSearchProject/)  
 Shu Zhao, Tan Yu, Anbang Xu, Japinder Singh, Aaditya Shukla, Rama Akkiraju
 ### Speculative Decoding
-[2203] [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](https://arxiv.org/abs/2203.164872)  [Code 💻](https://github.com/hemingkx/SpecDec)  
+[2203] [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](https://arxiv.org/abs/2203.16487)  [Code 💻](https://github.com/hemingkx/SpecDec)  
 Heming Xia, Tao Ge, Peiyi Wang, Si-Qing Chen, Furu Wei, Zhifang Sui
 
 [2211] [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192) 
@@ -405,8 +406,8 @@ Fabian Gloeckle,Badr Youbi Idrissi,Baptiste Rozière,David Lopez-Paz,Gabriel Syn
 [2404] [Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting](https://arxiv.org/abs/2404.18911)  [Code 💻](https://github.com/Equationliu/Kangaroo)  
 Fangcheng Liu, Yehui Tang, Zhenhua Liu, Yunsheng Ni, Kai Han, Yunhe Wang
 
-[2408] [Multi-Branch Self-Drafting for LLM Inference Acceleration](https://ojs.aaai.org/index.php/AAAI/article/view/34567/36722) 
-Zipeng Gao, Qingrong Xia, Tong Xu, Xinyu Duan, Zhi Zheng1, Zhefeng Wang, Enhong Chen
+[2504] [Multi-Branch Self-Drafting for LLM Inference Acceleration](https://ojs.aaai.org/index.php/AAAI/article/view/34567) 
+Zipeng Gao, Qingrong Xia, Tong Xu, Xinyu Duan, Zhi Zheng, Zhefeng Wang, Enhong Chen
 
 [2410] [Fast Best-of-N Decoding via Speculative Rejection](https://arxiv.org/abs/2410.20290) 
 Hanshi Sun, Momin Haider, Ruiqi Zhang, Huitao Yang, Jiahao Qiu, Ming Yin, Mengdi Wang, Peter Bartlett, Andrea Zanette
@@ -414,7 +415,7 @@ Hanshi Sun, Momin Haider, Ruiqi Zhang, Huitao Yang, Jiahao Qiu, Ming Yin, Mengdi
 [2410] [SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration](https://arxiv.org/abs/2410.06916)  [Code 💻](https://github.com/hemingkx/SWIFT)  
 Heming Xia, Yongqi Li, Jun Zhang, Cunxiao Du, Wenjie Li
 
-[2412] [DEER: Draft with Diffusion, Verify with Autoregressive Models](https://arxiv.org/abs/2512.15176)  [Code 💻](https://github.com/hemingkx/SWIFT)  
+[2512] [DEER: Draft with Diffusion, Verify with Autoregressive Models](https://arxiv.org/abs/2512.15176)  [Project 🌐](https://czc726.github.io/DEER/)  
 Zicong Cheng, Guo-Wei Yang, Jia Li, Zhijie Deng, Meng-Hao Guo, Shi-Min Hu
 
 [2502] [Lossless Acceleration of Large Language Models with Hierarchical Drafting based on Temporal Locality in Speculative Decoding](https://arxiv.org/abs/2502.05609)
@@ -423,11 +424,11 @@ Sukmin Cho, Sangjin Choi, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, 
 [2504] [Falcon: Faster and Parallel Inference of Large Language Models Through Enhanced Semi-Autoregressive Drafting and Custom-Designed Decoding Tree](https://ojs.aaai.org/index.php/AAAI/article/view/34566) 
 Xiangxiang Gao, Weisheng Xie, Yiwei Xiang, Feng Ji
 
-[2505] [SSR: Speculative Parallel Scaling Reasoning in Test-time](https://arxiv.org/pdf/2505.15340)
-Yuanlin, Bo WANG, Xiang LIU, Hong CHEN, Aiwei LIU, Xuming HU
+[2505] [SSR: Speculative Parallel Scaling Reasoning in Test-time](https://arxiv.org/abs/2505.15340)
+Yuanlin Chu, Bo Wang, Xiang Liu, Hong Chen, Aiwei Liu, Xuming Hu
 
-[2505] [Accelerating Large Language Model Reasoning via Speculative Search](https://arxiv.org/pdf/2505.02865)
-Chengbo He, Bochao Zou, Xin Li, Jiansheng Chen, Junliang Xing, Huimin Ma, Zhihai Wang, Jie Wang, Jilai Pan, Xilin Xia, Huiling Zhen, Mingxuan Yuan, Jianye Hao, Feng Wu
+[2505] [Accelerating Large Language Model Reasoning via Speculative Search](https://arxiv.org/abs/2505.02865)
+Zhihai Wang, Jie Wang, Jilai Pan, Xilin Xia, Huiling Zhen, Mingxuan Yuan, Jianye Hao, Feng Wu
 
 [2601] [Falcon-H1R: Pushing the Reasoning Frontiers with a Hybrid Model for Efficient Test-Time Scaling](https://arxiv.org/abs/2601.02346)  [Code 💻](https://huggingface.co/collections/tiiuae/falcon-h1r)  
 Falcon LLM Team, Iheb Chaabane, Puneesh Khanna, Suhail Mohmad, Slim Frikha, Shi Hu, Abdalgader Abubaker, Reda Alami, Mikhail Lubinets, Mohamed El Amine Seddik, Hakim Hacid
@@ -435,25 +436,25 @@ Falcon LLM Team, Iheb Chaabane, Puneesh Khanna, Suhail Mohmad, Slim Frikha, Shi 
 ---
 ## Applications
 
-[vLLM] [vLLM(PagedAttention)](https://github.com/vllm-project/vllm)
+[vLLM] [vLLM (PagedAttention)](https://github.com/vllm-project/vllm)
 
-[SGLang] [SGLang(RadixAttention)](https://github.com/sgl-project/sglang)
+[SGLang] [SGLang (RadixAttention)](https://github.com/sgl-project/sglang)
 
-[Gemini] [Geimini deepthink](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)
+[Gemini] [Gemini 2.5 Deep Think](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)
 
-[Claude] [Claude4 heavy](https://www.anthropic.com/news/claude-4)
+[Claude] [Claude 4](https://www.anthropic.com/news/claude-4)
 
-[Seed] [Seed thinking1.6](https://seed.bytedance.com/zh/seed1_6)
+[Seed] [Seed Thinking 1.6](https://seed.bytedance.com/zh/seed1_6)
 
-[Grok] [Grok4 heavy](https://x.com/xai/status/1943158495588815072)
+[Grok] [Grok 4 Heavy](https://x.com/xai/status/1943158495588815072)
 
-[Qwen] [Qwen3-max heavy](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list)
+[Qwen] [Qwen3-Max](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list)
 
 [2510] [ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking](https://arxiv.org/abs/2510.24698)  [Code 💻](https://github.com/Alibaba-NLP/DeepResearch)  
 Baixuan Li, Dingchu Zhang, Jialong Wu, Wenbiao Yin, Zhengwei Tao, Yida Zhao, Liwen Zhang, Haiyang Shen, Runnan Fang, Pengjun Xie, Jingren Zhou, Yong Jiang
 
-[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/pdf/2510.08521)  [Code 💻](https://deepprune.github.io/)  
-Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Xiangchao Yan, Wenlong Zhang, Lei Bai, Bo Zhang
+[2510] [FlowSearch: Advancing deep research with dynamic structured knowledge flow](https://arxiv.org/abs/2510.08521)  [Code 💻](https://deepprune.github.io/)  
+Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Shuaiyu Zhang, Shiyang Feng, Xiangchao Yan, Shufei Zhang, Wenlong Zhang, Lei Bai, Bo Zhang
 
 [2512] [PaperDebugger: A Plugin-Based Multi-Agent System for In-Editor Academic Writing, Review, and Editing](https://arxiv.org/abs/2512.02589)  [Code 💻](https://github.com/PaperDebugger/PaperDebugger)  
 Junyi Hou, Andre Lin Huikai, Nuo Chen , Yiwei Gong , Bingsheng He
