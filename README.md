@@ -28,45 +28,45 @@
 # 🔥 News
 
 - **[2025-10]** 🚀 Our comprehensive survey **"[A Survey on Parallel Reasoning](https://arxiv.org/abs/2510.12164)"** is now live on arXiv! It provides the first systematic roadmap for width-based inference scaling and test-time compute.
-- **[2025-9]** 🔥 **New Framework:** We released **[A2R: An Asymmetric Two-Stage Reasoning Framework](https://arxiv.org/abs/2509.22044)**, introducing a novel "Small-to-Big" explorer-synthesizer paradigm to optimize the efficiency and performance of parallel reasoning.
+- **[2025-09]** 🔥 **New Framework:** We released **[A2R: An Asymmetric Two-Stage Reasoning Framework](https://arxiv.org/abs/2509.22044)**, introducing a novel "Small-to-Big" explorer-synthesizer paradigm to optimize the efficiency and performance of parallel reasoning.
 
 # Overview
 
 In recent years, the capabilities of Large Language Models (LLMs) have advanced at an unprecedented rate. This progress has been largely attributed to the scaling of model parameters, training data, and computational resources. At the same time, inference-time performance has been significantly improved by extending the computational "length" through methods like Chain-of-Thought, which enables models to formulate a reasoning process before delivering a final answer.
 
-This raises a compelling question: beyond scaling the "depth" (model layers) and "length" (sequential reasoning), can we unlock new potential by introducing a "width" dimension to test-time computation? This collection explores this emerging frontier of **parallel reasoning**, which focuses on broadening the computational scope at inference time. Instead of pursuing a single line of thought, this paradigm involves generating and evaluating multiple, diverse reasoning paths or hypotheses in parallel. Conceptual examples can be seen in approaches where a model considers several hypotheses at once before proceeding, or in advanced multi-agent systems, like those explored by Gemini&Anthropic, where a lead agent coordinates multiple parallel agents to accomplish a goal.
+This raises a compelling question: beyond scaling the "depth" (model layers) and "length" (sequential reasoning), can we unlock new potential by introducing a "width" dimension to test-time computation? This collection explores this emerging frontier of **parallel reasoning**, which focuses on broadening the computational scope at inference time. Instead of pursuing a single line of thought, this paradigm involves generating and evaluating multiple, diverse reasoning paths or hypotheses in parallel.
 
 The adoption of parallel reasoning offers a dual advantage. First, it significantly expands the effective computational budget for any given query, enhancing the robustness and quality of the final output. Second, it holds immense practical value by drastically reducing latency, a critical factor for improving user experience in real-world applications.
 
-To systematically survey this exciting area, this collection curates key papers and resources, organized into the following categories:
+To systematically survey this exciting area, this collection curates key papers and resources across four themes.
 
-1.  [**Non-interactive Methods**](#non-interactive-methods): Methods where multiple reasoning paths are generated independently without overt communication, followed by a final aggregation step to produce a single answer.
-    * [**Self-Consistency**](#self-consistency):The foundational approach where a model generates multiple responses, and the final answer is selected based on consensus, typically through majority voting or by weighting votes using the model's internal confidence scores.
-    * [**Ranking base**](#ranking-base): This paradigm employs an external verifier or reward model to either rank and select the best candidate solution or synthesize a new, superior one by integrating insights from multiple reasoning paths.
-        * [**Best-of-N Sampling**](#best-of-n-Sampling): A method based on the principle that generating N solutions increases the probability of finding a correct one, which is then identified and selected by a verifier model.
-        * [**Advancing Verifier**](#advancing-verifier): Research focused on improving the ranking component itself, evolving from models that score the final outcome (ORMs) to those that score each reasoning step (PRMs).
-        * [**Ranking Mechanism**](#ranking-mechanism): Advanced techniques that shift from absolute scoring to relative judgments, using methods like pairwise comparisons or multi-stage filtering to efficiently identify the best candidate.
-        * [**Generative Synthesis**](#generative-synthesis): A paradigm that moves beyond selection to construct a new, superior solution by integrating insights from all generated candidates, often using an "explorer-synthesizer" architecture.
-    * [**Structure reasoning**](#structure-reasoning): A shift from linear Chain-of-Thought to dynamic problem-solving topologies that allow for exploring and integrating multiple lines of thought.
-        * [**Foundational Structures**](#foundational-structures): Seminal frameworks that introduced non-linear reasoning paths, such as Tree-of-Thoughts (ToT) and Graph-of-Thoughts (GoT).
-        * [**Guided Search & Efficiency Optimization**](#guided-search-efficiency-optimization): Techniques designed to manage the vast search spaces of structured reasoning, using guided search strategies and system-level enhancements to improve efficiency.
-        * [**Other Paradigm**](#other-paradigm): Frameworks that redefine the LLM's role from a monolithic reasoner to a specialized component within a larger cognitive architecture.
-2.  [**Interactive Methods**](#interactive-methods):A paradigm where multiple reasoning paths or agents dynamically exchange information during the inference process, rather than only at the end.
-    * [**Intra-interaction**](#intra-interaction): Interaction where different reasoning threads within a single model share information to adjust their trajectories during generation.
-    * [**Inter-interaction**](#inter-interaction): Interaction where multiple autonomous models or agents collaborate by exchanging intermediate results or engaging in dialogue.
-        * [**Debate Reflection**](#debate-reflection): A method where multiple agents engage in structured dialogue, critiquing and defending arguments to reach a more robust consensus.
-        * [**Collaboration Division of Labor**](#collaboration-division-of-labor): Approaches that distribute reasoning workloads across specialized agents, either by decomposing tasks or assigning distinct roles.
-        * [**Mixture of Agents**](#mixture-of-agents): Methods that harness the complementary expertise of multiple agents through structured frameworks, like layered architectures where agents build upon the outputs of others.
-3.  [**Efficiency Methods**](#efficiency-methods): Techniques that focus on accelerating the autoregressive decoding process itself by parallelizing token generation.
-    * [**Parallel Decoding**](#parallel-decoding): Exploits task-level or semantic-level parallelism by decomposing a generation task into independent units that can be decoded concurrently.
-    * [**Parallel Function Calling**](#parallel-function-calling): Introduces parallelism at the system level by enabling an LLM to schedule and execute multiple external tool calls simultaneously.
-    * [**Speculative Decoding**](#speculative-decoding): Accelerates token-level generation using a "draft-and-verify" paradigm, where a faster model proposes candidate tokens that the main model verifies in parallel.
-4.  [**Applications**](#applications): A review of real-world scenarios where parallel reasoning is applied to solve complex problems, enhance reliability, and accelerate specialized workflows.
-5.  [**Discussion🔥🔥🔥**](#discussion): Discussion into the core principles of parallel reasoning, welcome to communicate in issue or email!
+> [!NOTE]
+> Recent products make this intuition concrete. Anthropic's [multi-agent Research system](https://www.anthropic.com/engineering/multi-agent-research-system) uses an orchestrator-worker pattern in which a lead Claude delegates work to parallel subagents, while [Claude Code agent teams](https://code.claude.com/docs/en/agent-teams) expose a more explicit collaboration layer with a team lead, independent teammates, a shared task list, and a mailbox for coordination. On the product side, [Kimi Agent Swarm](https://www.kimi.com/blog/agent-swarm) pushes the idea toward self-organizing collaboration: Kimi K2.5 can self-direct up to 100 sub-agents and more than 1,500 tool calls for broad research, long-form writing, and other highly parallel tasks.
+
+## Taxonomy at a Glance
+
+- **[Non-interactive Methods](#non-interactive-methods)**
+  - [Self-Consistency](#self-consistency)
+  - [Ranking-based Aggregation](#ranking-based-aggregation)
+  - [Structured Reasoning](#structured-reasoning)
+- **[Interactive Methods](#interactive-methods)**
+  - [Intra-interaction](#intra-interaction)
+  - [Inter-interaction](#inter-interaction)
+- **[Efficiency Methods](#efficiency-methods)**
+  - [Parallel Decoding](#parallel-decoding)
+  - [Parallel Function Calling](#parallel-function-calling)
+  - [Speculative Decoding](#speculative-decoding)
+- **[Applications](#applications)**
+  - [Systems and Products](#systems-and-products)
+  - [Application Papers](#application-papers)
 
 # Papers
 ## Non-interactive Methods
+Methods where multiple reasoning branches are generated independently and merged only at the end.
+
 ### Self-Consistency
+The foundational family that samples multiple candidates and aggregates them through voting or confidence-aware consensus.
+
 [2203] [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/pdf/2203.11171)  
 Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed H. Chi, Sharan Narang, Aakanksha Chowdhery, Denny Zhou
 
@@ -97,14 +97,22 @@ Shiyu Ji, Yixuan Wang, Yijun Liu, Qingfu Zhu, Wanxiang Che
 [2512] [Think in Parallel, Answer as One: Logit Averaging for Open-Ended Reasoning](https://arxiv.org/abs/2512.02874)  
 Haonan Wang, Chao Du, Kenji Kawaguchi, Tianyu Pang
 
-### Ranking base
+---
+
+### Ranking-based Aggregation
+Methods that score, compare, or synthesize multiple candidates using verifiers, reward models, or learned aggregators.
+
 #### Best-of-N Sampling
+Generate several candidates and select the best one according to a verifier, reward signal, or downstream metric.
+
 [2407] [Large Language Monkeys: Scaling Inference Compute with Repeated Sampling](https://arxiv.org/abs/2407.21787)  [Code 💻](https://github.com/ScalingIntelligence/large_language_monkeys)   
 Bradley Brown, Jordan Juravsky, Ryan Ehrlich, Ronald Clark, Quoc V. Le, Christopher Ré, Azalia Mirhoseini
 
 [2408] [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](https://arxiv.org/abs/2408.03314)  
 Charlie Snell, Jaehoon Lee, Kelvin Xu, Aviral Kumar
 #### Advancing Verifier
+Research focused on making the verifier itself stronger, cheaper, or more process-aware.
+
 [2110] [Training Verifiers to Solve Math Word Problems](https://arxiv.org/pdf/2110.14168)  
 Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher Hesse, John Schulman
 
@@ -148,6 +156,8 @@ Yegon Kim, Seungyoo Lee, Chaeyun Jang, Hyungi Lee, Juho Lee
 Harman Singh, Xiuyu Li, Kusha Sareen, Monishwaran Maheswaran, Sijun Tan, Xiaoxia Wu, Junxiong Wang, Alpay Ariyak, Qingyang Wu, Samir Khaki, Rishabh Tiwari, Long Lian, Yucheng Lu, Boyi Li, Alane Suhr, Ben Athiwaratkun, Kurt Keutzer
 
 #### Ranking Mechanism
+Selection strategies that move beyond absolute scoring into pairwise ranking, tournaments, or staged filtering.
+
 [2406] [BoNBoN Alignment for Large Language Models and the Sweetness of Best-of-n Sampling](https://arxiv.org/abs/2406.00832)  [Code 💻](https://github.com/gl-ybnbxb/BoNBoN)  
 Lin Gui, Cristina Gârbacea, Victor Veitch
 
@@ -158,6 +168,8 @@ Xinglin Wang, Yiwei Li, Shaoxiong Feng, Peiwen Yuan, Boyuan Pan, Heda Wang, Yao 
 Yantao Liu, Zijun Yao, Rui Min, Yixin Cao, Lei Hou, Juanzi Li
 
 #### Generative Synthesis
+Rather than picking one candidate, these methods fuse multiple candidates into a stronger final answer.
+
 [2506] [Learning to Reason Across Parallel Samples for LLM Reasoning](https://arxiv.org/pdf/2506.09014)  
 Jianing Qi, Xi Ye, Hao Tang, Zhigang Zhu, Eunsol Choi
 
@@ -179,8 +191,14 @@ Wenting Zhao, Pranjal Aggarwal, Swarnadeep Saha, Asli Celikyilmaz, Jason Weston,
 [2510] [Rethinking Thinking Tokens: LLMs as Improvement Operators](https://arxiv.org/abs/2510.01123)  
 Lovish Madaan, Aniket Didolkar, Suchin Gururangan, John Quan, Ruan Silva, Ruslan Salakhutdinov, Manzil Zaheer, Sanjeev Arora, Anirudh Goyal
 
-### Structure reasoning
+---
+
+### Structured Reasoning
+Methods that organize reasoning as trees, graphs, or guided search processes instead of a single linear chain.
+
 #### Foundational Structures
+Seminal frameworks that introduced explicit non-linear reasoning topologies for LLM problem solving.
+
 [2305] [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601)  [Code 💻](https://github.com/kyegomez/tree-of-thoughts)  
 Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L. Griffiths, Yuan Cao, Karthik Narasimhan
 
@@ -200,6 +218,8 @@ Houjun Liu, Shikhar Murty, Christopher D. Manning, Róbert Csordás
 Zicheng Xu, Xiuyi Lou, Guanchu Wang, Yu-Neng Chuang, Feng Luo, Guangyao Zheng, Alexander S. Szalay, Zirui Liu, Vladimir Braverman
   
 #### Guided Search & Efficiency Optimization
+Methods that improve search quality or reduce the cost of structured reasoning.
+
 [2305] [Self-Evaluation Guided Beam Search for Reasoning](https://arxiv.org/abs/2305.00633)  [Code 💻](https://github.com/YuxiXie/SelfEval-Guided-Decoding)  
 Yuxi Xie, Kenji Kawaguchi, Yiran Zhao, Xu Zhao, Min-Yen Kan, Junxian He, Qizhe Xie
 
@@ -216,6 +236,8 @@ Yifu Ding, Wentao Jiang, Shunyu Liu, Yongcheng Jing, Jinyang Guo, Yingjie Wang, 
 Fengwei Teng, Quan Shi, Zhaoyang Yu, Jiayi Zhang, Yuyu Luo, Chenglin Wu, Zhijiang Guo
 
 #### Other Paradigm
+Related frameworks that reposition the LLM as one component inside a broader planning or cognitive system.
+
 [2210] [Measuring and Narrowing the Compositionality Gap in Language Models](https://arxiv.org/abs/2210.03350)  [Code 💻](https://github.com/ofirpress/self-ask)  
 Ofir Press, Muru Zhang, Sewon Min, Ludwig Schmidt, Noah A. Smith, Mike Lewis
 
@@ -228,7 +250,11 @@ Shibo Hao, Yi Gu, Haodi Ma, Joshua Jiahua Hong, Zhen Wang, Daisy Zhe Wang, Zhiti
 ---
 
 ## Interactive Methods
+Methods where parallel branches or agents exchange information during inference rather than only at the end.
+
 ### Intra-interaction
+Different reasoning threads within one model share intermediate state or partial results during generation.
+
 [2502] [Speculate, then Collaborate: Fusing Knowledge of Language Models during Decoding](https://arxiv.org/abs/2502.08020)  
 Ziyao Wang, Muneeza Azmat, Ang Li, Raya Horesh, Mikhail Yurochkin
 
@@ -274,8 +300,14 @@ Tong Wu, Yang Liu, Jun Bai, Zixia Jia, Shuyi Zhang, Ziyong Lin, Yanting Wang, So
 [2601] [Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware](https://arxiv.org/abs/2601.01298)  [Code 💻](https://github.com/JorgeLRW/warp-cortex)  
 Jorge L. Ruiz Williams
 
+---
+
 ### Inter-interaction
+Multiple agents or models collaborate through communication, critique, debate, or role specialization.
+
 #### Debate Reflection
+Agents improve answers through structured discussion, critique, and reflection.
+
 [2305] [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)  [Code 💻](https://github.com/composable-models/llm_multiagent_debate)  
 Yilun Du, Shuang Li, Antonio Torralba, Joshua B. Tenenbaum, Igor Mordatch
 
@@ -313,6 +345,8 @@ Edward Y. Chang, Ethan Y. Chang
 Oskar Wysocki, Magdalena Wysocka, Mauricio Jacobo, Harriet Unsworth, André Freitas
 
 #### Collaboration Division of Labor
+Tasks are decomposed across specialized agents or roles and later recombined.
+
 [2310] [Corex: Pushing the Boundaries of Complex Reasoning through Multi-Model Collaboration](https://arxiv.org/abs/2310.00280)  [Code 💻](https://github.com/QiushiSun/Corex)  
 Qiushi Sun, Zhangyue Yin, Xiang Li, Zhiyong Wu, Xipeng Qiu, Lingpeng Kong
 
@@ -344,6 +378,8 @@ Wei Yang, Jiacheng Pang, Shixuan Li, Paul Bogdan, Stephen Tu, Jesse Thomason
 Di Zhao, Longhui Ma, Siwei Wang, Miao Wang, Yi Kong
 
 #### Mixture of Agents
+Frameworks that combine heterogeneous agents to exploit complementary strengths.
+
 [2406] [Mixture-of-Agents Enhances Large Language Model Capabilities](https://arxiv.org/abs/2406.04692)  [Code 💻](https://github.com/togethercomputer/MoA?tab=readme-ov-file)  
 Junlin Wang, Jue Wang, Ben Athiwaratkun, Ce Zhang, James Zou
 
@@ -378,8 +414,13 @@ Jindi Lv, Yuhao Zhou, Zheng Zhu, Xiaofeng Wang, Guan Huang, Jiancheng Lv
 Yiming Yang, Zhuoyuan Li, Fanxiang Zeng, Hao Fu, Yue Liu
 
 ---
+
 ## Efficiency Methods
+Methods that use parallelism to reduce latency or increase throughput during inference.
+
 ### Parallel Decoding
+Decode independent units or branches concurrently beyond standard left-to-right generation.
+
 [1811] [Blockwise Parallel Decoding for Deep Autoregressive Models](https://arxiv.org/abs/1811.03115)  
 Mitchell Stern, Noam Shazeer, Jakob Uszkoreit
 
@@ -403,7 +444,11 @@ Hao Wen, Yifan Su, Feifei Zhang, Yunxin Liu, Yunhao Liu, Ya-Qin Zhang, Yuanchun 
 
 [2510] [Training Large Language Models To Reason In Parallel With Global Forking Tokens](https://arxiv.org/abs/2510.05132)  
 Sheng Jia, Xiao Wang, Shiva Prasad Kasiviswanathan
+---
+
 ### Parallel Function Calling
+Let models schedule and execute multiple external tool calls concurrently.
+
 [2312] [An LLM Compiler for Parallel Function Calling](https://arxiv.org/abs/2312.04511)  [Code 💻](https://github.com/SqueezeAILab/LLMCompiler)  
 Sehoon Kim, Suhong Moon, Ryan Tabrizi, Nicholas Lee, Michael W. Mahoney, Kurt Keutzer, Amir Gholami
 
@@ -418,7 +463,11 @@ In Gim, Seung-seob Lee, Lin Zhong
 
 [2508] [ParallelSearch: Train your LLMs to Decompose Query and Search Sub-queries in Parallel with Reinforcement Learning](https://arxiv.org/abs/2508.09303v1)  [Code 💻](https://shuzhao.me/ParallelSearchProject/)  
 Shu Zhao, Tan Yu, Anbang Xu, Japinder Singh, Aaditya Shukla, Rama Akkiraju
+---
+
 ### Speculative Decoding
+Use a draft-and-verify pipeline where cheap proposals are checked in parallel by a stronger model.
+
 [2203] [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](https://arxiv.org/abs/2203.16487)  [Code 💻](https://github.com/hemingkx/SpecDec)  
 Heming Xia, Tao Ge, Peiyi Wang, Si-Qing Chen, Furu Wei, Zhifang Sui
 
@@ -519,31 +568,25 @@ Zicong Cheng, Guo-Wei Yang, Jia Li, Zhijie Deng, Meng-Hao Guo, Shi-Min Hu
 Falcon LLM Team, Iheb Chaabane, Puneesh Khanna, Suhail Mohmad, Slim Frikha, Shi Hu, Abdalgader Abubaker, Reda Alami, Mikhail Lubinets, Mohamed El Amine Seddik, Hakim Hacid
 
 ---
+
 ## Applications
+Real systems and application papers that turn parallel reasoning ideas into practical products and workflows.
 
-[vLLM] [vLLM (PagedAttention)](https://github.com/vllm-project/vllm)  
-Open-source LLM serving engine built around PagedAttention for efficient KV-cache management and high-throughput inference.
+### Systems and Products
+Public-facing systems, platforms, and product features that embody parallel reasoning in deployment.
 
-[SGLang] [SGLang (RadixAttention)](https://github.com/sgl-project/sglang)  
-Structured generation runtime that pairs RadixAttention with aggressive batching and programmable inference control.
+- **vLLM** — [vLLM (PagedAttention)](https://github.com/vllm-project/vllm): efficient KV-cache management and high-throughput inference.
+- **SGLang** — [SGLang (RadixAttention)](https://github.com/sgl-project/sglang): structured generation with aggressive batching and programmable inference control.
+- **Gemini** — [Gemini 2.5 Deep Think](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/): a higher-compute reasoning mode for harder questions and long-horizon planning.
+- **Claude** — [Claude Code agent teams](https://code.claude.com/docs/en/agent-teams): a lead-agent workflow with coordinated teammates, shared tasks, and direct messaging.
+- **Kimi** — [Kimi K2.5 Agent Swarm](https://www.kimi.com/blog/agent-swarm): a large-scale multi-agent mode that can self-direct up to 100 sub-agents.
+- **LongCat** — [LongCat-Flash-Thinking](https://github.com/meituan-longcat/LongCat-Flash-Thinking): Meituan's open-source reasoning model, whose Heavy Thinking mode expands test-time reasoning depth and width through intensive parallel thinking.
+- **Seed** — [Seed Thinking 1.6](https://seed.bytedance.com/zh/seed1_6): a reasoning-focused model family for deliberation and agentic execution.
+- **Grok** — [Grok 4 Heavy](https://x.com/xai/status/1943158495588815072): a compute-heavier reasoning mode for harder multi-step analysis.
+- **Qwen** — [Qwen3-Max](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list): a flagship inference model for reasoning, agent use, and production workloads.
 
-[Gemini] [Gemini 2.5 Deep Think](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/)  
-Google DeepMind's higher-compute reasoning mode for harder questions, planning, and long-horizon problem solving.
-
-[Claude] [Claude Code agent teams](https://code.claude.com/docs/en/agent-teams)  
-Anthropic's experimental team workflow where a lead Claude coordinates teammates through shared tasks, direct messaging, and centralized management.
-
-[Kimi] [Kimi K2.5 Agent Swarm](https://www.kimi.com/blog/agent-swarm)  
-Moonshot AI's large-scale multi-agent mode, which can self-direct up to 100 sub-agents for parallel research, writing, and batch tasks.
-
-[Seed] [Seed Thinking 1.6](https://seed.bytedance.com/zh/seed1_6)  
-ByteDance's reasoning-focused model family for stronger deliberation, agentic execution, and longer-horizon tasks.
-
-[Grok] [Grok 4 Heavy](https://x.com/xai/status/1943158495588815072)  
-xAI's heavyweight reasoning mode aimed at more compute-intensive analysis and tougher multi-step problem solving.
-
-[Qwen] [Qwen3-Max](https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list)  
-Alibaba's flagship Qwen inference model for stronger reasoning, agent use, and production-scale assistant workloads.
+### Application Papers
+Task-specific works that apply parallel reasoning to concrete downstream scenarios.
 
 [2510] [ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking](https://arxiv.org/abs/2510.24698)  [Code 💻](https://github.com/Alibaba-NLP/DeepResearch)  
 Baixuan Li, Dingchu Zhang, Jialong Wu, Wenbiao Yin, Zhengwei Tao, Yida Zhao, Liwen Zhang, Haiyang Shen, Runnan Fang, Pengjun Xie, Jingren Zhou, Yong Jiang
@@ -552,15 +595,16 @@ Baixuan Li, Dingchu Zhang, Jialong Wu, Wenbiao Yin, Zhengwei Tao, Yida Zhao, Liw
 Yusong Hu, Runmin Ma, Yue Fan, Jinxin Shi, Zongsheng Cao, Yuhao Zhou, Jiakang Yuan, Shuaiyu Zhang, Shiyang Feng, Xiangchao Yan, Shufei Zhang, Wenlong Zhang, Lei Bai, Bo Zhang
 
 [2512] [PaperDebugger: A Plugin-Based Multi-Agent System for In-Editor Academic Writing, Review, and Editing](https://arxiv.org/abs/2512.02589)  [Code 💻](https://github.com/PaperDebugger/PaperDebugger)  
-Junyi Hou, Andre Lin Huikai, Nuo Chen , Yiwei Gong , Bingsheng He
+Junyi Hou, Andre Lin Huikai, Nuo Chen, Yiwei Gong, Bingsheng He
 
-# <a id="discussion" name="discussion"></a>Discussion🔥🔥🔥: Why does parallel reasoning work?
+# <a id="discussion" name="discussion"></a>Discussion: Why Does Parallel Reasoning Work?
+
 **DFS vs BFS** Sequential reasoning methods are analogous to a depth-first search (DFS). They generate solutions along a single path via iterative refinement, which risks getting trapped in a local minimum. In contrast, parallel reasoning resembles a breadth-first search (BFS), exploring multiple potential solutions simultaneously then aggregating them into a robust answer. This also indicates an interesting phenomenon: why simple repeated sampling methods can surpass the 'plan-process-summary' parallel method, which can be constrained by the quality of its initial plan.
 
 **Scaling Components** Following the evolution of parallel reasoning, repeated sampling has become the most common paradigm for boosting test-time computation. A key trend in this area is the evolution of aggregation methods, which have shifted from simple self-consistency (voting) to more sophisticated ranking-based methods (scoring), and ultimately to generative approaches. This evolution marks a significant difference in the computational scaling of the aggregation stage. While voting methods rely on simple, rule-based selection of the most common answer, ranking methods like ORM/PRM require a full model forward pass to score each candidate, similar to reward models in modern reinforcement learning. Generative methods take this even further, re-reasoning over all parallel outputs to construct a final answer, which represents another level of scaling test-time compute. 
 Thus, parallel scaling increases computation not only by decomposing a problem into several tasks but also by generating multiple solutions in parallel. This scaling of the aggregator's computation also boosts final performance, which can be further improved by scaling the main model or the reward model's inference time. This progression highlights a central theme: allocating more computation to all components at test-time can lead to significantly better performance.
 
-**Tuning vs In-Context** Sequential reasoning methods, like R1, operate by first rolling out multiple reasoning trajectories. These trajectories are then rewarded based on their final answers. Finally, paths are used to fine-tune the model’s parameters through a mechanism that reinforces positive outcomes and penalizes negative ones.In contrast, native parallel reasoning treats these rollout trajectories as a unified context by concatenating them. The model then performs its reasoning based on this combined input, effectively transforming a fine-tuning task into an in-context reasoning task. This approach also allows the model to be trained on how to best utilize this parallel information, thereby enhancing its capabilities.
+**Tuning vs In-Context** Sequential reasoning methods, like R1, operate by first rolling out multiple reasoning trajectories. These trajectories are then rewarded based on their final answers. Finally, paths are used to fine-tune the model’s parameters through a mechanism that reinforces positive outcomes and penalizes negative ones. In contrast, native parallel reasoning treats these rollout trajectories as a unified context by concatenating them. The model then performs its reasoning based on this combined input, effectively transforming a fine-tuning task into an in-context reasoning task. This approach also allows the model to be trained on how to best utilize this parallel information, thereby enhancing its capabilities.
 
 # ✍️ Citation
 
