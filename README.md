@@ -606,6 +606,8 @@ Thus, parallel scaling increases computation not only by decomposing a problem i
 
 **Tuning vs In-Context** Sequential reasoning methods, like R1, operate by first rolling out multiple reasoning trajectories. These trajectories are then rewarded based on their final answers. Finally, paths are used to fine-tune the model’s parameters through a mechanism that reinforces positive outcomes and penalizes negative ones. In contrast, native parallel reasoning treats these rollout trajectories as a unified context by concatenating them. The model then performs its reasoning based on this combined input, effectively transforming a fine-tuning task into an in-context reasoning task. This approach also allows the model to be trained on how to best utilize this parallel information, thereby enhancing its capabilities.
 
+**Evaluation under repeated sampling** [Don't Pass@k: A Bayesian Framework for Large Language Model Evaluation](https://arxiv.org/abs/2510.04265) (ICLR 2026) estimates benchmark performance and sampling uncertainty from repeated binary or graded outcomes. It studies how model comparisons change with the number of trials on mathematical reasoning benchmarks. [Scorio](https://github.com/mohsenhariri/scorio) implements the method.
+
 # ✍️ Citation
 
 If you find this repository or our survey paper helpful, please consider citing:
