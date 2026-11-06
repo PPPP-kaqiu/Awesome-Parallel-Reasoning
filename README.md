@@ -439,6 +439,9 @@ Xinyu Yang, Yuwei An, Hongyi Liu, Tianqi Chen, Beidi Chen
 [2508] [ASPD: Unlocking Adaptive Serial-Parallel Decoding by Exploring Intrinsic Parallelism in LLMs](https://arxiv.org/abs/2508.08895)  
 Keyu Chen, Zhifeng Shen, Daohai Yu, Haoqian Wu, Wei Wen, Jianfeng He, Ruizhi Qiao, Xing Sun
 
+[2508] [Empirical Analysis of Decoding Biases in Masked Diffusion Models](https://arxiv.org/abs/2508.13021)  [Code 💻](https://github.com/NEUIR/Uncode)  [Project 🌐](https://passionate11.github.io/Uncode-project-page/)  
+Pengcheng Huang, Tianming Liu, Zhenghao Liu, Yukun Yan, Shuo Wang, Tong Xiao, Zulong Chen, Maosong Sun
+
 [2509] [ParaThinker: Native Parallel Thinking as a New Paradigm to Scale LLM Test-time Compute](https://arxiv.org/abs/2509.04475)  [Code 💻](https://github.com/MobileLLM/ParaThinker)  
 Hao Wen, Yifan Su, Feifei Zhang, Yunxin Liu, Yunhao Liu, Ya-Qin Zhang, Yuanchun Li
 
